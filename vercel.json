@@ -2,7 +2,7 @@
     "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }],
     "headers": [
         {
-          "source": "/assets/[^.]+",
+          "source": "/assets/(.*)",
           "headers": [
             {
               "key": "Cache-Control",
