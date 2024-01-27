@@ -3431,7 +3431,7 @@ r._metadata=r._metadata||{},r._metadata.sdk={name:"sentry.javascript.ember",pack
 const s=function(){const e=i.GLOBAL_OBJ
 return e.__sentryEmberConfig=e.__sentryEmberConfig??{},e.__sentryEmberConfig}()
 Object.assign(s,r),o.init(r)}Object.keys(n).forEach((function(t){"default"!==t&&"__esModule"!==t&&(Object.prototype.hasOwnProperty.call(a,t)||t in e&&e[t]===n[t]||Object.defineProperty(e,t,{enumerable:!0,get:function(){return n[t]}}))}))
-e.getActiveTransaction=()=>o.getCurrentHub().getScope().getTransaction()
+e.getActiveTransaction=()=>o.getCurrentScope().getTransaction()
 e.instrumentRoutePerformance=e=>{const t=async(e,t,r,i)=>(0,n.startSpan)({op:e,name:t,origin:"auto.ui.ember"},(()=>r(...i))),r=e.name
 return{[r]:class extends e{beforeModel(...e){return t("ui.ember.route.before_model",this.fullRouteName,super.beforeModel.bind(this),e)}async model(...e){return t("ui.ember.route.model",this.fullRouteName,super.model.bind(this),e)}afterModel(...e){return t("ui.ember.route.after_model",this.fullRouteName,super.afterModel.bind(this),e)}setupController(...e){return t("ui.ember.route.setup_controller",this.fullRouteName,super.setupController.bind(this),e)}}}[r]}
 e.init=u})),define("@sentry/ember/instance-initializers/sentry-performance",["exports","@ember/instrumentation","@ember/runloop","@sentry/browser","@sentry/utils","@sentry/ember"],(function(e,t,r,n,i,s){"use strict"
@@ -3465,7 +3465,7 @@ if(!l||!c)return
 o.measure(u,t,r)
 const d=o.getEntriesByName(u)[0],p=(d.startTime+i.browserPerformanceTimeOrigin)/1e3,h=p+d.duration/1e3;(0,s.startInactiveSpan)({op:"ui.ember.init",name:"init",origin:"auto.ui.ember",startTimestamp:p})?.end(h),o.clearMarks(t),o.clearMarks(r),o.clearMeasures(u)}async function h(e){const o=a(),h=o.browserTracingOptions||o.sentry.browserTracingOptions||{},{BrowserTracing:f}=await emberAutoImportDynamic("@sentry/browser"),m=new f({routingInstrumentation:(t,r)=>{const n=e.lookup("router:main")
 let i=e.lookup("service:router")
-i.externalRouter&&(i=i.externalRouter),i._hasMountedSentryPerformanceRouting||i.recognize&&(i._hasMountedSentryPerformanceRouting=!0,l(i,n,o,t,r))},idleTimeout:o.transitionTimeout||5e3,...h}),v=n.getCurrentHub().getClient()
+i.externalRouter&&(i=i.externalRouter),i._hasMountedSentryPerformanceRouting||i.recognize&&(i._hasMountedSentryPerformanceRouting=!0,l(i,n,o,t,r))},idleTimeout:o.transitionTimeout||5e3,...h}),v=n.getClient()
 v&&v.addIntegration&&v.addIntegration(m),function(e){const{disableRunloopPerformance:t,minimumRunloopQueueDuration:n}=e
 if(t)return
 let a,o
