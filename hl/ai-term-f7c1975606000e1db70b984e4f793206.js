@@ -1,5 +1,5 @@
-import AiTerm from"./ai-term-class-fdb6f384eb41b3c1638ee4ba945a95a5.js"
-import AiTermChat from"./ai-term-chat-class-5df499a9c6e2ef6ed26aba0bf0cd52be.js"
+import AiTerm from"./ai-term-class-b2906cbcc90d64f9da4e05b6f113c5c5.js"
+import AiTermChat from"./ai-term-chat-class-04249e33da4a571a5e6c248bbbfe296d.js"
 import aiTermSetup from"./ai-term-setup-53f128c57902343214118563f10db550.js"
 if("undefined"!=typeof document){const t=document.createElement("template")
 t.id="ai-term",t.innerHTML='<div style="display: inline-flex;">\n  <span class="ai-term" part="ai-term-tag">\n    <slot>\n    </slot>\n    \n      </span>\n\n  </div>'
