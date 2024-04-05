@@ -327,7 +327,7 @@ return r?r.startChild(t):n.startTransaction(t)}function Nt(){return ge().getSpan
 r.setPropagationContext(l),c&&s&&a.kg.log(`[Tracing] Continuing trace ${s.traceId}.`)
 const u={...s,metadata:(0,o.Jr)({dynamicSamplingContext:s&&!i?{}:i})}
 return n?n(u):u}function $t(e,t,n){if(Et())return t?t.startChild(n):e.startTransaction(n)}function Ft(e){if(e.startTime){const t={...e}
-return t.startTimestamp=x(e.startTime),delete t.startTime,t}return e}var Bt=n(702),Ut=n(732)
+return t.startTimestamp=x(e.startTime),delete t.startTime,t}return e}var Bt=n(473),Ut=n(732)
 const jt=30
 function Ht(e,t,n=(0,Bt.x)(e.bufferSize||jt)){let r={}
 function s(s){const o=[]
@@ -459,7 +459,7 @@ return["onload","onerror","onprogress","onreadystatechange"].forEach((e=>{e in n
 return r&&(n.mechanism.data.handler=(0,xn.$P)(r)),rn(t,n)}))})),e.apply(this,t)}}function nr(e){const t=en,n=t[e]&&t[e].prototype
 n&&n.hasOwnProperty&&n.hasOwnProperty("addEventListener")&&((0,o.hl)(n,"addEventListener",(function(t){return function(n,r,s){try{"function"==typeof r.handleEvent&&(r.handleEvent=rn(r.handleEvent,{mechanism:{data:{function:"handleEvent",handler:(0,xn.$P)(r),target:e},handled:!1,type:"instrument"}}))}catch(e){}return t.apply(this,[n,rn(r,{mechanism:{data:{function:"addEventListener",handler:(0,xn.$P)(r),target:e},handled:!1,type:"instrument"}}),s])}})),(0,o.hl)(n,"removeEventListener",(function(e){return function(t,n,r){const s=n
 try{const n=s&&s.__sentry_wrapped__
-n&&e.call(this,t,n,r)}catch(e){}return e.call(this,t,s,r)}})))}var rr=n(952),sr=n(105),or=n(249),ir=n(36),ar=n(635),cr=n(315)
+n&&e.call(this,t,n,r)}catch(e){}return e.call(this,t,s,r)}})))}var rr=n(952),sr=n(105),or=n(702),ir=n(36),ar=n(635),cr=n(315)
 const lr="Breadcrumbs",ur=xe(lr,((e={})=>{const t={console:!0,dom:!0,fetch:!0,history:!0,sentry:!0,xhr:!0,...e}
 return{name:lr,setupOnce(){},setup(e){t.console&&(0,rr.e)(function(e){return function(t){if(fe()!==e)return
 const n={category:"console",data:{arguments:t.args,logger:"console"},level:(0,ar.VT)(t.level),message:(0,J.nK)(t.args," ")}
@@ -1761,7 +1761,7 @@ return p&&(h.extra=p),(0,s.Db)(h,void 0,void 0),(0,s.EG)(h,d),{...h,event_id:a&&
 if(o&&s&&s.syntheticException){const n=a(e,s.syntheticException)
 n.length&&(i.exception={values:[{value:t,stacktrace:{frames:n}}]})}if((0,r.Le)(t)){const{__sentry_template_string__:e,__sentry_template_values__:n}=t
 return i.logentry={message:e,params:n},i}return i.message=t,i}},662:(e,t,n)=>{n.r(t),n.d(t,{BAGGAGE_HEADER_NAME:()=>oe.bU,CONSOLE_LEVELS:()=>l.RU,DEFAULT_RETRY_AFTER:()=>se.B1,DEFAULT_USER_INCLUDES:()=>U,GLOBAL_OBJ:()=>a.GLOBAL_OBJ,LRUMap:()=>fe,MAX_BAGGAGE_STRING_LENGTH:()=>oe._3,SENTRY_BAGGAGE_KEY_PREFIX:()=>oe.lq,SENTRY_BAGGAGE_KEY_PREFIX_REGEX:()=>oe.jm,SENTRY_XHR_DATA_KEY:()=>g.xU,SentryError:()=>i.b,SyncPromise:()=>Z.cW,TRACEPARENT_REGEXP:()=>ee.Ke,_asyncNullishCoalesce:()=>ye,_asyncOptionalChain:()=>_e,_asyncOptionalChainDelete:()=>ve,_browserPerformanceTimeOriginMode:()=>Q.mL,_nullishCoalesce:()=>ge.h,_optionalChain:()=>be.x,_optionalChainDelete:()=>Se,addClickKeypressInstrumentationHandler:()=>d.O,addConsoleInstrumentationHandler:()=>u.e,addContextToFrame:()=>S.go,addExceptionMechanism:()=>S.EG,addExceptionTypeValue:()=>S.Db,addFetchInstrumentationHandler:()=>p.U,addGlobalErrorInstrumentationHandler:()=>h.V,addGlobalUnhandledRejectionInstrumentationHandler:()=>m.h,addHistoryInstrumentationHandler:()=>f.a,addInstrumentationHandler:()=>y,addItemToEnvelope:()=>ne.BO,addNonEnumerableProperty:()=>E.xp,addOrUpdateIntegration:()=>ae,addRequestDataToEvent:()=>q,addRequestDataToTransaction:()=>j,addXhrInstrumentationHandler:()=>g.UK,applyAggregateErrorsToEvent:()=>r.Z,arrayify:()=>S.lE,baggageHeaderToDynamicSamplingContext:()=>oe.EN,basename:()=>N,browserPerformanceTimeOrigin:()=>Q.Z1,callFrameToStackFrame:()=>me,checkOrSetAlreadyCaught:()=>S.YO,consoleSandbox:()=>l.Cf,convertToPlainObject:()=>E.Sh,createAttachmentEnvelopeItem:()=>ne.zQ,createClientReportEnvelope:()=>re.y,createEnvelope:()=>ne.Jd,createEventEnvelopeHeaders:()=>ne.Cd,createStackParser:()=>K.pE,dateTimestampInSeconds:()=>Q.yW,dirname:()=>L,disabledUntil:()=>se.ns,dropUndefinedKeys:()=>E.Jr,dsnFromString:()=>o.U4,dsnToString:()=>o.RA,dynamicRequire:()=>k.l$,dynamicSamplingContextToSentryBaggageHeader:()=>oe.IQ,envelopeContainsItemType:()=>ne.R,envelopeItemTypeToDataCategory:()=>ne.mL,escapeStringForRegex:()=>we,eventFromMessage:()=>ue.aB,eventFromUnknownInput:()=>ue.ME,exceptionFromError:()=>ue.GJ,extractExceptionKeysForMessage:()=>E.zf,extractPathForTransaction:()=>H,extractRequestData:()=>z,extractTraceparentData:()=>ee.qG,filenameIsInApp:()=>pe.h,fill:()=>E.hl,forEachEnvelopeItem:()=>ne.gv,generateSentryTraceHeader:()=>ee.$p,getComponentName:()=>s.iY,getDomElement:()=>s.qT,getEventDescription:()=>S.jH,getFunctionName:()=>K.$P,getGlobalObject:()=>a.R,getGlobalSingleton:()=>a.Y,getLocationHref:()=>s.l4,getNumberOfUrlSegments:()=>$.$A,getOriginalFunction:()=>E.HK,getSDKSource:()=>te.S,getSanitizedUrlString:()=>$.tF,getSdkMetadataForEnvelopeHeader:()=>ne.HY,htmlTreeAsString:()=>s.Rt,isAbsolute:()=>A,isBrowser:()=>v.j,isBrowserBundle:()=>te.n,isDOMError:()=>_.TX,isDOMException:()=>_.fm,isElement:()=>_.kK,isError:()=>_.VZ,isErrorEvent:()=>_.VW,isEvent:()=>_.cO,isInstanceOf:()=>_.V9,isMatchingPattern:()=>Y.zC,isNaN:()=>_.i2,isNativeFetch:()=>X.Du,isNodeEnv:()=>k.KV,isParameterizedString:()=>_.Le,isPlainObject:()=>_.PO,isPrimitive:()=>_.pt,isRateLimited:()=>se.Q,isRegExp:()=>_.Kj,isString:()=>_.HD,isSyntheticEvent:()=>_.Cy,isThenable:()=>_.J8,isVueViewModel:()=>_.y1,join:()=>D,loadModule:()=>k.$y,logger:()=>l.kg,makeDsn:()=>o.vK,makeFifoCache:()=>le,makePromiseBuffer:()=>P.x,markFunctionWrapped:()=>E.$Q,memoBuilder:()=>b.i,nodeStackLineParser:()=>K.Ep,normalize:()=>w.Fv,normalizePath:()=>M,normalizeToSize:()=>w.Qy,normalizeUrlToBase:()=>w.C8,objectify:()=>E.mz,originalConsoleMethods:()=>l.LD,parameterize:()=>de,parseEnvelope:()=>ne.f4,parseRetryAfterHeader:()=>se.JY,parseSemver:()=>S.J4,parseStackFrames:()=>ue.g,parseUrl:()=>$.en,rejectedSyncPromise:()=>Z.$2,relative:()=>O,resetInstrumentationHandlers:()=>ke.t4,resolve:()=>I,resolvedSyncPromise:()=>Z.WD,safeJoin:()=>Y.nK,serializeEnvelope:()=>ne.V$,severityFromString:()=>V.En,severityLevelFromString:()=>V.VT,snipLine:()=>Y.JM,stackParserFromStackParserOptions:()=>K.Sq,stringMatchesSomePattern:()=>Y.U0,stripSentryFramesAndReverse:()=>K.UV,stripUrlQueryAndFragment:()=>$.rt,supportsDOMError:()=>X.zO,supportsDOMException:()=>X.fL,supportsErrorEvent:()=>X.S$,supportsFetch:()=>X.Ak,supportsHistory:()=>Ee.B,supportsNativeFetch:()=>X.t$,supportsReferrerPolicy:()=>X.hv,supportsReportingObserver:()=>X.zb,timestampInSeconds:()=>Q.ph,timestampWithMs:()=>Q._I,tracingContextFromHeaders:()=>ee.KA,truncate:()=>Y.$G,updateRateLimits:()=>se.WG,urlEncode:()=>E._j,uuid4:()=>S.DM,validSeverityLevels:()=>V.Tx,walk:()=>w._p,watchdogTimer:()=>he,winterCGHeadersToDict:()=>G,winterCGRequestToRequestData:()=>J})
-var r=n(394),s=n(809),o=n(84),i=n(913),a=n(956),c=n(689),l=n(190),u=n(952),d=n(105),p=n(36),h=n(309),m=n(222),f=n(41),g=n(249)
+var r=n(394),s=n(809),o=n(84),i=n(913),a=n(956),c=n(689),l=n(190),u=n(952),d=n(105),p=n(36),h=n(309),m=n(222),f=n(41),g=n(702)
 function y(e,t){switch(e){case"console":return(0,u.e)(t)
 case"dom":return(0,d.O)(t)
 case"xhr":return(0,g.UK)(t)
@@ -1790,7 +1790,7 @@ let r=x(e.split("/").filter((e=>!!e)),!t).join("/")
 return r||t||(r="."),r&&n&&(r+="/"),(t?"/":"")+r}function A(e){return"/"===e.charAt(0)}function D(...e){return M(e.join("/"))}function L(e){const t=C(e),n=t[0]
 let r=t[1]
 return n||r?(r&&(r=r.slice(0,r.length-1)),n+r):"."}function N(e,t){let n=C(e)[2]
-return t&&n.slice(-1*t.length)===t&&(n=n.slice(0,n.length-t.length)),n}var P=n(702),$=n(315)
+return t&&n.slice(-1*t.length)===t&&(n=n.slice(0,n.length-t.length)),n}var P=n(473),$=n(315)
 const F={ip:!1,request:!0,transaction:!0,user:!0},B=["cookies","data","headers","method","query_string","url"],U=["id","username","email"]
 function j(e,t,n){if(e){if(!e.metadata.source||"url"===e.metadata.source){const[n,r]=H(t,{path:!0,method:!0})
 e.updateName(n),e.setMetadata({source:r})}e.setAttribute("url",t.originalUrl||t.url),t.baseUrl&&e.setAttribute("baseUrl",t.baseUrl),e.setData("query",W(t,n))}}function H(e,t={}){const n=e.method&&e.method.toUpperCase()
@@ -1910,7 +1910,7 @@ c=t
 const r={from:e,to:t};(0,i.rK)("history",r)}return e.apply(this,t)}}a.onpopstate=function(...t){const n=a.location.href,r=c
 c=n
 const s={from:r,to:n}
-if((0,i.rK)("history",s),e)try{return e.apply(this,t)}catch(e){}},(0,r.hl)(a.history,"pushState",t),(0,r.hl)(a.history,"replaceState",t)}},249:(e,t,n)=>{n.d(t,{UK:()=>l,xU:()=>c})
+if((0,i.rK)("history",s),e)try{return e.apply(this,t)}catch(e){}},(0,r.hl)(a.history,"pushState",t),(0,r.hl)(a.history,"replaceState",t)}},702:(e,t,n)=>{n.d(t,{UK:()=>l,xU:()=>c})
 var r=n(146),s=n(927),o=n(956),i=n(776)
 const a=o.GLOBAL_OBJ,c="__sentry_xhr_v3__"
 function l(e){(0,i.Hj)("xhr",e),(0,i.D2)("xhr",u)}function u(){if(!a.XMLHttpRequest)return
@@ -2041,7 +2041,7 @@ case"symbol"==typeof e||"bigint"==typeof e:t=Object(e)
 break
 case(0,o.pt)(e):t=new e.constructor(e)
 break
-default:t=e}return t}},702:(e,t,n)=>{n.d(t,{x:()=>o})
+default:t=e}return t}},473:(e,t,n)=>{n.d(t,{x:()=>o})
 var r=n(913),s=n(612)
 function o(e){const t=[]
 function n(e){return t.splice(t.indexOf(e),1)[0]}return{$:t,add:function(o){if(!(void 0===e||t.length<e))return(0,s.$2)(new r.b("Not adding Promise because buffer limit was reached."))
