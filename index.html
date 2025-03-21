@@ -2306,8 +2306,9 @@
 const captchaSolution = "21"; // User-provided solution
 const captchaSecret = "apiSecret"; // Secret received from the create call, decoded (NOT AS BASE64)
 
-fetch(`https://api.genuine-captcha.io/api/captcha/verify?captchaSolution=${captchaSolution}&captchaSecret=${captchaSecret}`)
-    .then(response => {
+fetch(`https://api.genuine-captcha.io/api/captcha/verify?captchaSolution=${solution}&captchaSecret=${encodeURIComponent(captchaSecret)}`, {
+    mode: 'cors' 
+})      .then(response => {
         if (response.ok) {
             console.log("CAPTCHA verified successfully");
         } else {
@@ -2356,8 +2357,9 @@ fetch(`https://api.genuine-captcha.io/api/captcha/verify?captchaSolution=${captc
 const captchaSolution = "21";
 const captchaSecret = "apiSecret";
 const customSecret = "yourOwnSecret";
-
-fetch(`https://api.genuine-captcha.io/api/captcha/verify/custom?captchaSolution=${captchaSolution}&captchaSecret=${captchaSecret}&customSecret=${customSecret}`)
+fetch(`https://api.genuine-captcha.io/api/captcha/verify?captchaSolution=${solution}&captchaSecret=${encodeURIComponent(captchaSecret)}&customSecret=${customSecret}`, {
+    mode: 'cors' 
+})
     .then(response => {
         if (response.ok) {
             console.log("CAPTCHA verified with custom secret successfully");
