@@ -1,477 +1,2562 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="genuine captcha Privacy-Focused Secure User-Friendly Data-Protection No-Tracking GDPR-Compliant Non-Invasive Ethical Accessibility-Friendly Alternative Technology Verification Web-Security Bot-Detection Transparent Cookie-Free Trustworthy Safe Browsing Authentication Innovation"/>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genuine Captcha: No privacy logging | No IP address tracking</title>
     <meta name="description" content="Genuine Captcha: The Open-Source, Privacy-Focused CAPTCHA Solution. Protect your site from bots while ensuring GDPR compliance and user privacy without collecting personal data.">
-    <meta name="ai-term_apiKey" content="3d183dd9579bd17e75e14ed5dc6f37e731b08a482ea8d184412240aaf0df5ceb;https://genuine-captcha.io|3|7386918f15147df78d6f0a740b4314a8">
-    
-<meta name="genuine-captcha-web/config/environment" content="%7B%22modulePrefix%22%3A%22genuine-captcha-web%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22history%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22genuine-captcha-web%22%2C%22version%22%3A%220.0.0%22%7D%2C%22captchaApiHost%22%3A%22https%3A%2F%2Fapi.genuine-captcha.io%22%2C%22exportApplicationGlobal%22%3Afalse%7D" />
-<!-- EMBER_CLI_FASTBOOT_TITLE --><title>Genuine Captcha: No privacy logging | No IP address tracking</title>
-<script type="text/javascript">if (window.performance && window.performance.mark) {
-  window.performance.mark('@sentry/ember:initial-load-start');
-}
-</script>
+    <meta name="keywords" content="genuine captcha, Privacy-Focused, Secure, User-Friendly, Data-Protection, No-Tracking, GDPR-Compliant, Non-Invasive, Ethical, Accessibility-Friendly, Alternative Technology, Verification, Web-Security, Bot-Detection, Transparent, Cookie-Free, Trustworthy, Safe Browsing, Authentication, Innovation">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
-    <link integrity="" rel="stylesheet" href="/assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css">
-    <link integrity="" rel="stylesheet" href="/assets/genuine-captcha-web-869e92858816e3e6cbc4f25c8baa888d.css">
-    
-    
-  </head>
-  <body>
-    <!--script type="module" src="https://cryptng.github.io/ai-term-vanillajs/ai-term.js" crossorigin="anonymous"></script-->
-    <script type="module" src="./hl/ai-term-176733520a7938c995500e5d12ede02e.js" crossorigin="anonymous" integrity="sha256-FWwdWMaaRKd+GR5sOMvAYtSdcVBuaweqr8c5dANRnXc= sha512-8g4+ggv6RGONU4Fj8PDk2jnu8v1hPypG3xsPM4I1T4B29yJl4lbickdMDXqa49jzP5Xlv+HAY4bRwT3iOlnbAg==" ></script>
-    <script type="x/boundary" id="fastboot-body-start"></script>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #a5b4fc;
+            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            --secondary: #10b981;
+            --secondary-dark: #059669;
+            --secondary-light: #6ee7b7;
+            --secondary-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --accent: #f43f5e;
+            --accent-dark: #e11d48;
+            --accent-light: #fda4af;
+            --dark: #0f172a;
+            --dark-2: #1e293b;
+            --light: #f8fafc;
+            --light-2: #e2e8f0;
+            --gray: #64748b;
+            --gray-light: #cbd5e1;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --border-radius: 12px;
+            --border-radius-lg: 24px;
+            --border-radius-sm: 6px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+            --font-sans: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-display: 'Space Grotesk', sans-serif;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        }
 
-<style>
-  .application{
-      font-family: Quicksand;  
-      size:cover;
-      margin:0;
-      height: 100vh;
-      width: calc(100vw - 10px);
-      color: white;
-      position: fixed;
-      top:0;
-        
-    }
-  
+        /* Dark mode variables */
+        .dark {
+            --primary: #818cf8;
+            --primary-dark: #6366f1;
+            --primary-light: #c7d2fe;
+            --secondary: #34d399;
+            --secondary-dark: #10b981;
+            --secondary-light: #a7f3d0;
+            --dark: #f8fafc;
+            --dark-2: #e2e8f0;
+            --light: #0f172a;
+            --light-2: #1e293b;
+            --gray: #94a3b8;
+            --gray-light: #334155;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
 
-}
-</style>
-<div class="application">
-       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  
-  
-<style>
-@media screen and (min-width: 0px) and (max-width: 1035px){
-    .hamburger-menu{
-        display: inline-block;
-    }
-}
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 80px;
+        }
 
-@media screen and (min-width: 1036px){
-    .hamburger-menu{
-        display: none;
-    }
-}
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            transition: var(--transition);
+            overflow-x: hidden;
+        }
 
-.hamburger-menu{
-    width: 70px;
-}
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
 
-.hamburger-menu #menu__toggle {
-  opacity: 0;
-}
-.hamburger-menu #menu__toggle:checked + .menu__btn &gt; span {
-  top:22px;
-}
-.hamburger-menu #menu__toggle:checked + .menu__btn &gt; span {
-  transform: rotate(45deg);
-  
-}
-.hamburger-menu #menu__toggle:checked + .menu__btn &gt; span::before {
-  top: 0;
-  transform: rotate(0deg);
-  background-color: white;
-}
-.hamburger-menu #menu__toggle:checked + .menu__btn &gt; span::after {
-  top: 0;
-  transform: rotate(90deg);
-  background-color: white;
-}
-.hamburger-menu #menu__toggle:checked ~ .menu__box {
-  left: 0 !important;
-}
-.hamburger-menu .menu__btn {
-      position: fixed;
-    top: 57px;
-    left: 20px;
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-    z-index: 1;
-    padding: 10px;
-    border-radius: 42px;
-    box-shadow: 3px 3px 5px black;
-    background-color: #0073aaa3;
+        h1 {
+            font-size: 3.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.02em;
+        }
 
-}
-.hamburger-menu .menu__btn &gt; span,
-.hamburger-menu .menu__btn &gt; span::before,
-.hamburger-menu .menu__btn &gt; span::after {
-  display: block;
-  position: absolute;
-  width: 24px;
-  height: 2px;
-  top: 13px;
-  background-color: white;
-  transition-duration: .25s;
-}
-.hamburger-menu .menu__btn &gt; span::before {
-  content: '';
-  top: 8px;
-}
-.hamburger-menu .menu__btn &gt; span::after {
-  content: '';
-  top: 16px;
-}
-.hamburger-menu .menu__box {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 300px;
-  height: 100%;
-  margin: 0;
-  padding: 110px 0;
-  list-style: none;
-  background-color: #ECEFF1;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
-  transition-duration: .25s;
-}
-.hamburger-menu .menu__item {
-  display: block;
-  padding: 12px 24px;
-  color: #333;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
-  transition-duration: .25s;
-}
-.hamburger-menu .menu__item:hover {
-  background-color: #CFD8DC;
-}
+        h2 {
+            font-size: 2.5rem;
+            letter-spacing: -0.01em;
+        }
 
-div.dashbar
-{
-    top: 0px;
-    left:0px;
-    background-color: color(display-p3 0.000000 0.450980 0.666667 / 0.666667);
-    border-bottom: 1px solid #55bff08f;
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    z-index: 2147483647;
-    box-shadow: 6px 6px 6px 3px rgb(0 0 0 / 22%), 0 4px 4px 0 rgb(0 0 0 / 35%);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+        h3 {
+            font-size: 1.75rem;
+        }
 
+        p {
+            margin-bottom: 1rem;
+        }
 
-    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera &gt; 12.1 */
-       -moz-animation: fadein 1s; /* Firefox &lt; 16 */
-        -ms-animation: fadein 1s; /* Internet Explorer */
-         -o-animation: fadein 1s; /* Opera &lt; 12.1 */
-            animation: fadein 1s;
-}
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+        }
 
-div.dashbar a{
-    border-bottom:none;
-}
+        a:hover {
+            color: var(--primary-dark);
+        }
 
-nav {
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-}
+        a.underline-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
 
-nav .classic-menu {
-    margin-left: 20px;
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-}
+        a.underline-link:hover::after {
+            width: 100%;
+        }
 
-.classic-menu&gt;div {
-    margin-right: 1em;
-    margin-left: 1em;
-}
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
 
-nav .classic-menu a{
-  color: white;
-  text-decoration: none;
-}
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.75rem;
+            background: var(--primary-gradient);
+            color: white;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-bounce);
+            border: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
 
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-dark);
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+        }
 
-nav .classic-menu .active:not(.live-app) a {
-  /* text-decoration: underline; */
-  font-weight: bold;
-  border-width: 0px 0px 2px 0px;
-  border-style: solid;
-}
+        .btn:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
 
-nav .classic-menu :not(.live-app) a:hover{
-  border-width: 0px 0px 2px 0px;
-  border-style: solid;
-}
+        .btn:active {
+            transform: translateY(-1px);
+        }
 
-nav .classic-menu .active.live-app {
-  /* text-decoration: underline; */
+        .btn-secondary {
+            background: var(--secondary-gradient);
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
 
-  border-width: 0px 0px 2px 0px;
-  border-style: solid;
-}
+        .btn-secondary::before {
+            background: var(--secondary-dark);
+        }
 
-nav .classic-menu .live-app:hover{
-  border-width: 0px 0px 2px 0px;
-  border-style: solid;
-}
+        .btn-secondary:hover {
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+        }
 
-@media screen and (min-width: 0px) and (max-width:1035px){
-  nav .classic-menu {
-      display: none;
-  }
-}
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            box-shadow: none;
+        }
 
+        .btn-outline::before {
+            background: var(--primary);
+        }
 
+        .btn-outline:hover {
+            color: white;
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2);
+        }
 
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            box-shadow: 0 4px 15px rgba(244, 63, 94, 0.3);
+        }
 
-nav .cryptng-logo svg {
-  width: 55mm !important;
-  position: relative;
-  left: 5px;
-  top: 2px;
-}
+        .btn-accent::before {
+            background: var(--accent-dark);
+        }
 
-nav .cryptng-logo svg .svg-copyright {
-    font-size: small;
-}
+        .btn-accent:hover {
+            box-shadow: 0 8px 20px rgba(244, 63, 94, 0.4);
+        }
 
+        .btn-icon {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-nav .classic-menu&gt;div {
-  display: inline-block;
-  margin-right: 10px;
-  margin-left: 10px;
-  padding-top: 3px;
-  font-size: larger;
-  padding-bottom: 10px;
-}
+        .btn-icon i {
+            font-size: 1.2rem;
+        }
 
-nav .liveapp-menu {
-    left: 245px;
-    display: none;
-}
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(248, 250, 252, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: var(--transition);
+        }
 
-@media screen and (min-width: 400px) and (max-width:1035px){
-  nav .liveapp-menu {
-      display: inline-block;
-  }
-}
+        .dark header {
+            background-color: rgba(15, 23, 42, 0.9);
+        }
 
-nav .live-app a {
-  border: 3px solid #21fff466;
-  border-radius: 10px;
-  text-decoration: none;
-  padding: 3px 5px;
-  color: white;
-  background-color: #00538aa3;
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
 
-}
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
 
-</style>
-<div class="dashbar">
+        .logo::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            opacity: 0.3;
+            z-index: -1;
+            animation: pulse 3s infinite;
+        }
 
-    <nav>
-         <div class="cryptng-logo">
- <a href="https://cryptng.com">
- <style>
-  svg path.default{
-    fill:none;fill-opacity:1;stroke:#ffffff;
-    stroke-dasharray:none;
-    stroke-dashoffset:0;
-    stroke-opacity:1;
-  }
- </style>
-<svg width="55mm" viewbox="0 0 202.03022 60.697964" version="1.1" id="svg48582" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-  <g inkscape:label="Ebene 1" inkscape:groupmode="layer" id="layer1" transform="translate(-69.703847,-37.243053)">
-    <g id="g42009-8" inkscape:export-filename="..\Pictures\TshirtFront.png" inkscape:export-xdpi="580" inkscape:export-ydpi="580" style="fill:none" transform="matrix(0.87217938,0,0,0.87217938,-6.8102416,12.333267)">
-      <path id="path220-1-8-3" class="default" style="stroke-width:0.571142;" d="M 91.022351,68.072331 89.443636,70.85614 104.77965,97.899451 120.11567,70.85614 118.65684,68.283171 104.8458,91.620247 Z"></path>
-      <path id="path220-1-8-0-7" class="default" style="stroke-width:0.571142;" d="m 104.81066,28.814779 -15.336018,27.043827 1.401465,2.471167 14.068913,-23.460584 13.93093,23.22959 1.27072,-2.240173 z"></path>
-      <path id="path427-3-0-0" class="default" style="stroke-width:0.571142;" d="M 104.94517,34.868979 88.059522,63.025429 104.84561,91.620313 121.79935,62.972826 Z"></path>
-      <path class="default" style="stroke-width:2;" d="m 94.649502,70.102398 -3.18921,-5.459776 h 6.96758 l 0.0504,11.821961 4.339108,7.512952 0.0201,-20.094344" id="path16584-6"></path>
-      <path class="default" style="stroke-width:2;" d="m 110.42617,48.411838 -5.37477,-9.183373 -13.553458,22.176108 26.510118,0.0075 -5.04795,-8.55107" id="path14968-7"></path>
-      <path class="default" style="stroke-width:2;" d="m 115.73418,68.551712 2.45857,-3.926883 -11.49673,0.005 0.01,19.336744 7.08636,-11.936302 -4.33355,0.01506 0.009,2.7396" id="path17312-6"></path>
-    </g>
-    <path style="fill:#004b72;stroke:#ffffff;stroke-width:0.433017;stroke-linecap:round;stroke-dasharray:none" d="M 101.02038,67.378749 H 270.51757" id="path11590"></path>
-    <text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:23.5282px;font-family:Quicksand;-inkscape-font-specification:'Quicksand, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#004b72;stroke:none;stroke-width:0.711379;stroke-linecap:round;stroke-dasharray:none" x="153.92152" y="60.840588" id="text11648"><tspan sodipodi:role="line" id="tspan11646" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:23.5282px;font-family:Quicksand;-inkscape-font-specification:'Quicksand, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:none;stroke-width:0.711379" x="138.92152" y="60.840588">C<tspan style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:16.9926px;font-family:Quicksand;-inkscape-font-specification:'Quicksand, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:none;stroke-width:0.711379" id="tspan1682">RYPT</tspan>NG</tspan></text>
-    <text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.2031px;font-family:Quicksand;-inkscape-font-specification:'Quicksand, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#004b72;stroke:none;stroke-width:0.762024;stroke-linecap:round;stroke-dasharray:none" x="100.52585" y="88.144646" id="text11648-3"><tspan sodipodi:role="line" id="tspan11646-9" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:19.0567px;font-family:Quicksand;-inkscape-font-specification:'Quicksand, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:none;stroke-width:0.762024" x="100.52585" y="88.144646">Genuine Captcha <tspan class="svg-copyright" x="252" y="80">©</tspan></tspan></text>
-  </g>
-</svg>
-</a>
-</div>
-        <div class="hamburger-menu">
-            <input id="menu__toggle" type="checkbox">
-            <label class="menu__btn" for="menu__toggle">
-                <span></span>
-            </label>
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+        }
 
-            <ul class="menu__box">
-                <li><a id="ember4" class="ember-view active menu__item active" href="/">Home</a></li>
-                <li><a id="ember5" class="ember-view menu__item " href="/usecases">Use Cases</a></li>
-                <li><a id="ember6" class="ember-view menu__item " href="/features">Features</a></li>
-                <li><a id="ember7" class="ember-view menu__item  live-app" href="/app">Live App</a></li>
-                <li><a id="ember8" class="ember-view menu__item " href="/why">Why Genuine Captcha<sup>©</sup></a></li>
-                <li><a id="ember9" class="ember-view menu__item " href="/how-to">Api How-To</a></li>
-                <li><a class="menu__item " href="https://github.com/cryptNG/genuine-captcha" target="_blank">Github ↗</a></li>
+        .logo img {
+            height: 40px;
+            margin-right: 0.5rem;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+            z-index: 1001;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: var(--dark);
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 10rem 0 6rem;
+            background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, rgba(16, 185, 129, 0.05) 90%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.6s forwards 0.2s;
+        }
+
+        .hero-title {
+            margin-bottom: 1.5rem;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.6s forwards 0.4s;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            color: var(--gray);
+            max-width: 700px;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.6s forwards 0.6s;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.6s forwards 0.8s;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.6s forwards 1s;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Features Section */
+        .section {
+            padding: 8rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.05;
+            background-image: 
+                radial-gradient(circle at 25px 25px, var(--primary) 2%, transparent 0%),
+                radial-gradient(circle at 75px 75px, var(--primary) 2%, transparent 0%);
+            background-size: 100px 100px;
+        }
+
+        .section-title-container {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section-subtitle {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            order: -1; /* This moves it above the title */
+        }
+
+        .section-title {
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+        }
+
+        .section-description {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .feature-card {
+            background-color: var(--light);
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            border: 1px solid var(--gray-light);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            position: relative;
+        }
+
+        .feature-icon::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            top: -5px;
+            left: -5px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .feature-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--primary-gradient);
+            border-radius: 1.5px;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover .feature-title::after {
+            width: 60px;
+        }
+
+        /* Why Section */
+        .why-section {
+            background-color: var(--light-2);
+        }
+
+        .dark .why-section {
+            background-color: var(--light-2);
+        }
+
+        .card {
+            background-color: var(--light);
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2.5rem;
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-gradient);
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .card-title {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        .card-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--primary-gradient);
+            border-radius: 1.5px;
+            transition: var(--transition);
+        }
+
+        .card:hover .card-title::after {
+            width: 60px;
+        }
+
+        .card-content {
+            margin-bottom: 1.5rem;
+        }
+
+        .card-list {
+            list-style-position: outside;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-list li {
+            margin-bottom: 0.75rem;
+            position: relative;
+        }
+
+        .card-list li::before {
+            content: '✓';
+            color: var(--primary);
+            position: absolute;
+            left: -1.5rem;
+            font-weight: bold;
+        }
+
+        /* How-To Section */
+        .steps {
+            counter-reset: step;
+        }
+
+        .step {
+            position: relative;
+            padding: 2.5rem;
+            background-color: var(--light);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+            overflow: hidden;
+        }
+
+        .step::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--primary-gradient);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            z-index: 1;
+        }
+
+        .step::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .step:hover::after {
+            opacity: 1;
+        }
+
+        .step-content {
+            padding-left: 3.5rem;
+        }
+
+        .step-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .code-block {
+            background-color: var(--dark-2);
+            color: var(--light);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            position: relative;
+        }
+
+        .code-block::before {
+            content: 'Code';
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--primary-gradient);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            border-radius: 0 var(--border-radius) 0 var(--border-radius-sm);
+            font-family: var(--font-sans);
+        }
+
+        .response-block {
+            background-color: var(--dark-2);
+            color: var(--light);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            position: relative;
+        }
+
+        .response-block::before {
+            content: 'Response';
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--secondary-gradient);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            border-radius: 0 var(--border-radius) 0 var(--border-radius-sm);
+            font-family: var(--font-sans);
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: radial-gradient(circle at 90% 10%, rgba(99, 102, 241, 0.1) 0%, rgba(16, 185, 129, 0.05) 90%);
+        }
+
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background-color: var(--light);
+            border-radius: var(--border-radius-lg);
+            padding: 3rem 2.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card.popular {
+            transform: scale(1.05);
+            z-index: 2;
+            border-color: var(--primary-light);
+        }
+
+        .pricing-card.popular::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: 1.5rem;
+            right: -4rem;
+            background: var(--primary-gradient);
+            color: white;
+            padding: 0.5rem 4rem;
+            font-size: 0.75rem;
+            transform: rotate(45deg);
+            font-weight: 600;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .pricing-card.popular:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .pricing-name {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pricing-price span {
+            font-size: 1.25rem;
+            margin-right: 0.25rem;
+        }
+
+        .pricing-period {
+            color: var(--gray);
+            font-size: 0.875rem;
+        }
+
+        .pricing-description {
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--gray);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .pricing-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-feature i {
+            color: var(--primary);
+            margin-right: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .pricing-cta {
+            margin-top: auto;
+        }
+
+        .pricing-btn {
+            width: 100%;
+        }
+
+        /* Contact Form */
+        .contact-section {
+            background-color: var(--light);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-info {
+            padding: 2rem;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info-icon {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        .contact-info-content h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form {
+            background-color: var(--light);
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-light);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--border-radius);
+            background-color: var(--light);
+            color: var(--dark);
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+
+        .form-check {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-check-input {
+            margin-right: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        .form-check-label {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--primary-gradient);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-description {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .cta-btn {
+            background-color: white;
+            color: black; /* Changed from var(--primary) to black */
+            font-weight: 700;
+            text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-btn::before {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-btn:hover {
+            color: black; /* Changed from var(--primary) to black */
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 5rem 0 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--primary-gradient);
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .footer-description {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .footer-social-link:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-heading {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: var(--primary-gradient);
+            border-radius: 1px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-link-item {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-link {
+            color: var(--gray);
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .footer-link i {
+            margin-right: 0.5rem;
+            font-size: 0.75rem;
+            transition: var(--transition);
+        }
+
+        .footer-link:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .footer-link:hover i {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: var(--gray);
+        }
+
+        .footer-bottom a {
+            color: var(--primary-light);
+        }
+
+        .footer-bottom a:hover {
+            color: white;
+        }
+
+        /* Dark Mode Toggle */
+        .theme-toggle {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background: var(--primary-gradient);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition-bounce);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .theme-toggle i {
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background-color: var(--light);
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: translateY(20px);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--gray);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            color: var(--danger);
+        }
+
+        .modal-title {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        /* Privacy Policy & Terms */
+        .legal-content {
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-content h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .legal-content p {
+            margin-bottom: 1rem;
+        }
+
+        .legal-content ul {
+            margin-bottom: 1rem;
+            margin-left: 1.5rem;
+        }
+
+        .legal-content ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s forwards;
+        }
+
+        .animate-slide-left {
+            animation: slideInLeft 1s forwards;
+        }
+
+        .animate-slide-right {
+            animation: slideInRight 1s forwards;
+        }
+
+        .animate-scale-in {
+            animation: scaleIn 1s forwards;
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-500 {
+            animation-delay: 0.5s;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+
+            .pricing-card.popular:hover {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.25rem;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 400px;
+                height: 100vh;
+                background-color: var(--light);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 5rem 2rem 2rem;
+                transition: var(--transition);
+                box-shadow: var(--shadow-lg);
+                z-index: 1000;
+            }
+
+            .dark .nav-menu {
+                background-color: var(--light);
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-item {
+                margin: 0.75rem 0;
+                width: 100%;
+            }
+
+            .nav-link {
+                display: block;
+                width: 100%;
+                padding: 0.75rem 0;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .section {
+                padding: 5rem 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero {
+                padding: 8rem 0 4rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .feature-card, .card, .step, .pricing-card {
+                padding: 1.5rem;
+            }
+        }
+
+        .code-block-container {
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 0.2rem;
+            right: 4rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius-sm);
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 2;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .copy-btn i {
+            margin-right: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">
+                <span>Genuine Captcha<sup>©</sup></span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="#why" class="nav-link">Why Genuine Captcha</a></li>
+                <li class="nav-item"><a href="#how-to" class="nav-link">API How-To</a></li>
+                <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#try-it-out" class="nav-link">Try it out</a></li>
+                <li class="nav-item"><a href="https://github.com/cryptNG/genuine-captcha" class="nav-link" target="_blank">Github <i class="fas fa-external-link-alt"></i></a></li>
             </ul>
         </div>
-        
-        <div class="classic-menu">
-            <div class="small-caps active"><a id="ember10" class="ember-view active" href="/">Home</a></div>|
-            <div class="small-caps "><a id="ember11" class="ember-view" href="/usecases">Use Cases</a></div>|
-            <div class="small-caps "><a id="ember12" class="ember-view" href="/features">Features</a></div>|
-            <div class="small-caps  live-app"><a id="ember13" class="ember-view" href="/app">Live App</a></div>|
-            <div class="small-caps "><a id="ember14" class="ember-view" href="/why">Why Genuine Captcha<sup>©</sup></a></div>|
-            <div class="small-caps "><a id="ember15" class="ember-view" href="/how-to">Api How-To</a></div>|
-            <div class="small-caps "><a href="https://github.com/cryptNG/genuine-captcha" target="_blank">Github ↗</a></div>
-        </div>
-        <div class="liveapp-menu">
-            <div class="small-caps  live-app"><a id="ember16" class="ember-view" href="/app">Live App</a></div>
-        </div>
-    </nav>
-    
-</div>
-<style>
-   
+    </header>
 
-</style>
-
-
-
-<div class="page">
-    <div class="page-content stacked parallax">
-        <div class="parallax-layer layer1">
-            <h1 class="page-title">The <ai-term class="rgb" prompt="What is the meaning of privacy friendly in web context">Privacy-Friendly</ai-term> Alternative for Secure, User-Respecting Web <ai-term prompt="Explain human verification in web context">Human Verification</ai-term></h1>
-            <h2 class="splash-title">
-            <img class="title-mobile-splash" src="images/SplashImage1-c777c50fc19417cf0ed03908cd2e7fca.jpg" title="Automate, Secure, and Scale Your PDF Generation Processes Effortlessly">
-            <span>The Ultimate Privacy Captcha API</span>
-            </h2>
-        </div>
-        <div class="parallax-layer layer2"> 
-        <div class="card wide-card">
-            <h3 class="card-title">
-                Why another <ai-term prompt="Explain captcha in context of web human verification">Captcha</ai-term> Solution - Why Genuine Captcha<sup>©</sup>
-            </h3>
-                  
-            <div class="card-body">
-                <div class="card-content">
-                    <p>
-                        Typical CAPTCHA solutions on the web, while maybe effective in distinguishing human users from bots, can raise several privacy concerns: 
-                    </p>
-                    <ul>    
-                        <li>Most <b>collect user data</b> like IP addresses, mouse movements, and <ai-term prompt="What does browsing patterns mean in a privacy context.">browsing patterns</ai-term>, </li>
-                        <li>Potentially <b>aggregating privacy data</b> for profiling or advertising. </li>
-                        <li>Using <b>cookies</b> or tracking technologies and therefore raising <ai-term prompt="give short summary of GDPR">GDPR</ai-term>-related concerns. </li>
-                        <li>Many rely on third-party services, risking <b>unwitting data sharing</b>. </li>
-                        <li>Some use invasive methods like keystroke monitoring and might <b>lack transparency</b> about data usage and storage. </li>
-                        <li>The data gathered by CAPTCHA systems, if misused, could <ai-term prompt="Give sample threats of compromisation of user privacy">compromise user privacy</ai-term>. </li>
-                       </ul> 
-                        These issues underscore the need for more privacy-conscious CAPTCHA alternatives in web security.
-                    
-                
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">Privacy-First CAPTCHA Solution</div>
+                <h1 class="hero-title">The Privacy-Friendly Alternative for Secure, User-Respecting Web Human Verification</h1>
+                <p class="hero-subtitle">Protect your site from bots while ensuring GDPR compliance and user privacy without collecting personal data.</p>
+                <div class="hero-buttons">
+                    <a href="#features" class="btn btn-icon"><i class="fas fa-shield-alt"></i> Explore Features</a>
+                    <a href="#pricing" class="btn btn-outline btn-icon"><i class="fas fa-tag"></i> View Pricing</a>
                 </div>
-                <div class="card-spotlight">
-                    <img src="images/SplashImage2-79da301514d4d7e941ff193c94f7f73e.jpg" title="Automate, Secure, and Scale Your PDF Generation Processes Effortlessly" width="100%">
-                    
-        
+                <div class="hero-image floating">
+                    <img src="placeholder.svg" alt="Genuine Captcha Interface">
                 </div>
             </div>
         </div>
-        <div class="card wide-card">
-            <h3 class="card-title">
-                Why Choose Genuine Captcha<sup>©</sup>? A Game-Changer in <ai-term class="asterisk" prompt="What means user verification in context of captcha">User Verification</ai-term>
-            </h3>
-                  
-            <div class="card-body">
-                <div class="card-content">
-                    <p>
-                        <b>Genuine Captcha<sup>©</sup></b> emerges as a revolutionary solution in the realm of CAPTCHA integration, particularly for those prioritizing GDPR compliance and user privacy. This platform stands out due to its exceptional features:
-                    </p>
-                    <ul>
-                        <li><b><ai-term prompt="Give some general information about GDPR policies">GDPR Compliance</ai-term></b>:<br> Genuine Captcha<sup>©</sup> is designed to meet the standards of GDPR. By choosing this platform, integrators can align with these strict data protection laws, ensuring legal compliance and peace of mind.</li>
-
-                        <li><b>Open-Source</b>:<br> Genuine Captcha<sup>©</sup> source code is transparent and flexibile. This aspect allows for continuous improvement, driven by a open-source community.</li>
-
-                        <li><b>Privacy-Centric Verification</b>:<br> Genuine Captcha<sup>©</sup>'s design is the commitment to user privacy. It verifies human interactions without harvesting any private data, setting a new benchmark in respecting user privacy.</li>
-
-                        <li><b>Enhanced User Experience</b>:<br> By eliminating the collection of personal data, Genuine Captcha<sup>©</sup> provides a more respectful user experience. This approach addresses and resolves the privacy concerns commonly associated with traditional CAPTCHA systems.</li>
-
-                        <li><b>Innovative Verification</b>:<br> Genuine Captcha<sup>©</sup> excels in verifying human interactions with an innovative approach. This ensures a seamless and user-friendly verification process, enhancing overall user satisfaction.</li>
-                    </ul>
-In summary, Genuine Captcha<sup>©</sup> is not just a tool; it's a paradigm shift in how we approach user verification - prioritizing privacy, compliance, and user experience in an unprecedented manner.
+    </section>
+<!-- How It Works Section -->
+<section id="how-it-works" class="section">
+    <div class="section-pattern"></div>
+    <div class="container">
+        <div class="section-title-container">
+            <div class="section-subtitle">Simple Process</div>
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-description">A straightforward, privacy-focused approach to CAPTCHA verification</p>
+        </div>
+        <div class="steps">
+            <div class="step animate-slide-left" data-scroll>
+                <div class="step-content">
+                    <h3 class="step-title">Flexible Hosting Options</h3>
+                    <p>You can either self-host the API on your own servers for complete control, or request hosting by us for a hassle-free experience. Both options maintain the same privacy standards with no data collection.</p>
+                </div>
+            </div>
+            <div class="step animate-slide-right" data-scroll>
+                <div class="step-content">
+                    <h3 class="step-title">Simple API Request</h3>
+                    <p>Your website or frontend makes a simple API call to the CAPTCHA service to request a challenge image. This requires minimal code and creates no performance impact on your application.</p>
+                    
+                </div>
+            </div>
+            <div class="step animate-slide-left" data-scroll>
+                <div class="step-content">
+                    <h3 class="step-title">Display the CAPTCHA</h3>
+                    <p>The image is received as base64 and can be displayed on any page, alongside a secret token. This approach works with any frontend framework or vanilla HTML/CSS/JS.</p>
                  
                 </div>
-                <div class="card-spotlight">
-                    <img src="images/SplashImage3-4398cf6367e96d3502e7d122acdb3b67.jpg" title="Automate, Secure, and Scale Your PDF Generation Processes Effortlessly" width="100%">
-                    
-        
+            </div>
+            <div class="step animate-slide-right" data-scroll>
+                <div class="step-content">
+                    <h3 class="step-title">User Solves the CAPTCHA</h3>
+                    <p>The user views the CAPTCHA challenge on your website and enters their solution. This creates a natural, intuitive verification experience without hidden tracking or data collection.</p>
                 </div>
             </div>
-        </div>
-
-        <div class="card wide-card">
-         
-            <div class="card-body">
-                <div class="card-content">
-                    <p>
-                        Genuine Captcha is proudly enriched with <a href="https://ai-term.io/" target="_blank" title="AI-Term | Bring your content to life">ai-term.io</a> - "Enhance any content to give your viewers unparalleled experience. AI-Term<sup>©</sup> excels with extensive features establishing revenue growth and SEO benefits."
-                    </p>
+            <div class="step animate-slide-left" data-scroll>
+                <div class="step-content">
+                    <h3 class="step-title">Submit for Verification</h3>
+                    <p>When the user submits their solution, your frontend sends both the user's answer and the secret token to the verification endpoint. This maintains the integrity of the verification process.</p>
                    
                 </div>
-                
+            </div>
+            <div class="step animate-slide-right" data-scroll>
+                <div class="step-content">
+                    <h3 class="step-title">Verification Result</h3>
+                    <p>The endpoint returns a simple success or error response. Based on this result, you can allow the user to proceed or request they try again. The entire process is completed with minimal overhead.</p>
+                </div>
             </div>
         </div>
-        </div> 
+        <div class="card animate-fade-in" data-scroll style="margin-top: 3rem; text-align: center;">
+            <h3 class="card-title">Privacy-First Approach</h3>
+            <div class="card-content">
+                <p>Throughout this entire process, there is:</p>
+                <ul class="card-list" style="display: inline-block; text-align: left;">
+                    <li>No data collection of any kind</li>
+                    <li>Minimal code and overhead</li>
+                    <li>No performance impact on your website</li>
+                    <li>No hidden data collection or distribution</li>
+                    <li>Complete GDPR compliance by design</li>
+                </ul>
+                <div style="margin-top: 2rem;">
+                    <a href="#how-to" class="btn btn-primary">View API Documentation</a>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
-   <ai-term-chat options="{&quot;highlight&quot;:&quot;rgb&quot;}"></ai-term-chat>
-  
 
-<style>
-  .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 30px;
-    background-image: linear-gradient( #3190a4, #47a8c0aa);
-    color: white;
-    z-index: 1000;
-    color: white;
-    text-align: center;
-}
-.footer a{
-  color:white;
-}
-</style>
-<div class="footer">
-    <a id="ember17" class="ember-view" href="/terms">Terms</a> | 
-    <a id="ember18" class="ember-view" href="/terms">Privacy</a> | 
-    <a id="ember19" class="ember-view" href="/terms">Security</a> | 
-    <a id="ember20" class="ember-view" href="/terms">About</a>
-  </div>
-</div><script type="x/boundary" id="fastboot-body-end"></script>
 
-    <script src="/assets/vendor-93ef18f1ee336b29f7006fe38d2522c5.js" integrity="sha256-niNBZAnfM6k4yJ0nKvFTZT10+ojvQP+w+6BPbmFsaSo= sha512-NqAJiRm27ttuw5mSnUadIl0HZRHoj0NHJ0rDg+VZEe3yunOV+NsaweDZ+uE4BuQVVJ6cvgiXBbFqhAj3jqQSjA==" ></script>
-<script src="/assets/chunk.459.fcb2f5ae867f6b074d48.js" integrity="sha256-Lr2v1On+2fwCGrXgM4iygsIWJA4aXY5rtsCfiCw+O5w= sha512-YrtcVMSjHDk0a+IRciDTh1GYKwKHVkF85qQ37kIgWTOCgeewJ+Kb7Gl/g/O9KIVX4X3iKpo5G0frOuu+cBHAaQ==" ></script>
-<script src="/assets/chunk.143.35632b159235a73846ec.js" integrity="sha256-nmRyjDhy/Uce3oJnRAWbZYL3d2Er/+unk+VD761+iq0= sha512-NCsXqfgv4cC2yGEzje8ZImQK7KnK2J/+O7khfL3rqzkUAvESFrzxvnNG6OGByvkONNVGFNIACUaf+qHRUMZOxA==" ></script>
-    <script src="/assets/genuine-captcha-web-3bb7c858afa27a9de7de1ddf57990cb5.js" integrity="sha256-4DU5LGxWt4Sokha95uLgFo0dSpE78h12xp2BmoJR9IQ= sha512-z3VzUpk0TqXau3P2PWyMrzFgICdGRPqXrpUCML6/ivWc34TVBrc6nYti+GUd3eH10RDtzA569CQv77I0CRLUgw==" ></script>
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title animate-fade-in" data-scroll>Ready to Implement Privacy-Focused CAPTCHA?</h2>
+                <p class="cta-description animate-fade-in delay-100" data-scroll>Start protecting your site from bots while respecting user privacy today.</p>
+                <div class="cta-buttons">
+                    <a href="https://github.com/cryptNG/genuine-captcha" class="btn cta-btn animate-fade-in delay-200" data-scroll target="_blank">Get Started on GitHub</a>
+                    <a href="#pricing" class="btn cta-btn animate-fade-in delay-300" data-scroll>View Pricing Options</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script type="text/javascript">if (window.performance && window.performance.mark) {
-  window.performance.mark('@sentry/ember:initial-load-end');
-}
-</script>
+
+    <!-- Why Section -->
+    <section id="why" class="section why-section">
+        <div class="section-pattern"></div>
+        <div class="container">
+            <div class="section-title-container">
+                <div class="section-subtitle">Why Choose Us</div>
+                <h2 class="section-title">Why Genuine Captcha<sup>©</sup></h2>
+                <p class="section-description">A revolutionary approach to CAPTCHA that prioritizes user privacy and GDPR compliance</p>
+            </div>
+            <div class="card animate-slide-left" data-scroll>
+                <h3 class="card-title">Why another Captcha Solution?</h3>
+                <div class="card-content">
+                    <p>Typical CAPTCHA solutions on the web, while maybe effective in distinguishing human users from bots, can raise several privacy concerns:</p>
+                    <ul class="card-list">
+                        <li>Most collect user data like IP addresses, mouse movements, and browsing patterns</li>
+                        <li>Potentially aggregating privacy data for profiling or advertising</li>
+                        <li>Using cookies or tracking technologies and therefore raising GDPR-related concerns</li>
+                        <li>Many rely on third-party services, risking unwitting data sharing</li>
+                        <li>Some use invasive methods like keystroke monitoring and might lack transparency about data usage and storage</li>
+                        <li>The data gathered by CAPTCHA systems, if misused, could compromise user privacy</li>
+                    </ul>
+                    <p>These issues underscore the need for more privacy-conscious CAPTCHA alternatives in web security.</p>
+                </div>
+            </div>
+            <div class="card animate-slide-right" data-scroll>
+                <h3 class="card-title">Why Choose Genuine Captcha<sup>©</sup>? A Game-Changer in User Verification</h3>
+                <div class="card-content">
+                    <p>Genuine Captcha<sup>©</sup> emerges as a revolutionary solution in the realm of CAPTCHA integration, particularly for those prioritizing GDPR compliance and user privacy. This platform stands out due to its exceptional features:</p>
+                    <ul class="card-list">
+                        <li><strong>GDPR Compliance:</strong> Genuine Captcha<sup>©</sup> is designed to meet the standards of GDPR. By choosing this platform, integrators can align with these strict data protection laws, ensuring legal compliance and peace of mind.</li>
+                        <li><strong>Open-Source:</strong> Genuine Captcha<sup>©</sup> source code is transparent and flexibile. This aspect allows for continuous improvement, driven by a open-source community.</li>
+                        <li><strong>Privacy-Centric Verification:</strong> Genuine Captcha<sup>©</sup>'s design is the commitment to user privacy. It verifies human interactions without harvesting any private data, setting a new benchmark in respecting user privacy.</li>
+                        <li><strong>Enhanced User Experience:</strong> By eliminating the collection of personal data, Genuine Captcha<sup>©</sup> provides a more respectful user experience. This approach addresses and resolves the privacy concerns commonly associated with traditional CAPTCHA systems.</li>
+                        <li><strong>Innovative Verification:</strong> Genuine Captcha<sup>©</sup> excels in verifying human interactions with an innovative approach. This ensures a seamless and user-friendly verification process, enhancing overall user satisfaction.</li>
+                    </ul>
+                    <p>In summary, Genuine Captcha<sup>©</sup> is not just a tool; it's a paradigm shift in how we approach user verification - prioritizing privacy, compliance, and user experience in an unprecedented manner.</p>
+                </div>
+            </div>
+            <div class="card animate-fade-in" data-scroll>
+                <div class="card-content">
+                    <p>Integrators of third-party CAPTCHA solutions should be aware of the potential legal challenges they might face regarding non-compliance with GDPR in Europe and similar data protection regulations. The collection and processing of personal data by CAPTCHA systems, if not handled in accordance with these laws, could lead to significant legal repercussions, including hefty fines and reputational damage.</p>
+                    <p>Genuine Captcha<sup>©</sup> offers a resolution to the dilemma faced by third-party CAPTCHA integrators, particularly concerning GDPR compliance and user privacy. As an open-source solution, it is uniquely designed to verify human interactions without engaging in any private data collection activities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="section-pattern"></div>
+        <div class="container">
+            <div class="section-title-container">
+                <div class="section-subtitle">What We Offer</div>
+                <h2 class="section-title">Features and Capabilities</h2>
+                <p class="section-description">Fast, Scalable, Secure, Easy Integration & Extension</p>
+            </div>
+            <div class="features">
+                <div class="feature-card animate-fade-in" data-scroll>
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="feature-title">Privacy and GDPR Compliant</h3>
+                    <p>At the core of Genuine Captcha<sup>©</sup> is its commitment to user privacy. It's designed to distinguish between humans and bots without collecting or tracking personal data, fully aligning with GDPR standards.</p>
+                </div>
+                <div class="feature-card animate-fade-in delay-100" data-scroll>
+                    <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+                    <h3 class="feature-title">Scalable Architecture</h3>
+                    <p>Genuine Captcha<sup>©</sup> is built to scale. Whether it's a small blog or a large e-commerce platform, it can effortlessly handle increasing loads and user numbers.</p>
+                </div>
+                <div class="feature-card animate-fade-in delay-200" data-scroll>
+                    <div class="feature-icon"><i class="fas fa-code-branch"></i></div>
+                    <h3 class="feature-title">Extensibility and Open Source</h3>
+                    <p>Genuine Captcha<sup>©</sup> is open-source, offering unparalleled flexibility. Developers can extend and customize it according to their specific needs.</p>
+                </div>
+                <div class="feature-card animate-fade-in delay-400" data-scroll>
+                    <div class="feature-icon"><i class="fas fa-server"></i></div>
+                    <h3 class="feature-title">Ease of Self-Hosting</h3>
+                    <p>Genuine Captcha<sup>©</sup> is designed with ease of self-hosting in mind. Organizations can deploy it on their servers, giving them complete control over their CAPTCHA solution.</p>
+                </div>
+                <div class="feature-card animate-fade-in delay-500" data-scroll>
+                    <div class="feature-icon"><i class="fas fa-feather-alt"></i></div>
+                    <h3 class="feature-title">Minimal Integration Footprint</h3>
+                    <p>Implementing Genuine Captcha<sup>©</sup> is straightforward and unobtrusive. It has a very small integration footprint, ensuring it doesn't bog down website performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section pricing-section">
+        <div class="container">
+            <div class="section-title-container">
+                <div class="section-subtitle">Flexible Options</div>
+                <h2 class="section-title">Choose Your Plan</h2>
+                <p class="section-description">We offer flexible pricing options to meet your needs</p>
+            </div>
+            <div class="pricing-container">
+                <div class="pricing-card animate-scale-in" data-scroll>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Self-Hosted</h3>
+                        <div class="pricing-price"><span>$</span>0</div>
+                        <div class="pricing-period">Forever Free</div>
+                    </div>
+                    <p class="pricing-description">Perfect for developers and privacy-conscious organizations</p>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature"><i class="fas fa-check"></i> Open-source code</li>
+                        <li class="pricing-feature"><i class="fas fa-check"></i> Self-hosted on your servers</li>
+                        <li class="pricing-feature"><i class="fas fa-check"></i> Full customization</li>
+                        <li class="pricing-feature"><i class="fas fa-check"></i> Community support</li>
+                        <li class="pricing-feature"><i class="fas fa-check"></i> GDPR compliant</li>
+                        <li class="pricing-feature"><i class="fas fa-check"></i> No data collection</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <a href="https://github.com/cryptNG/genuine-captcha" class="btn pricing-btn" target="_blank">Get Started</a>
+                    </div>
+                </div>
+                <div class="pricing-card popular animate-scale-in delay-200" data-scroll>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Hosted Solution</h3>
+                        <div class="pricing-price"><span>$</span>250</div>
+                        <div class="pricing-period">per year</div>
+                    </div>
+                    <p class="pricing-description">Special introductory offer - Hosted on our German servers</p>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature"><i class="fas fa-check"></i> No setup required</li>
+                        <li class="pricing-feature"><i class="fas fa-check"></i> Hosted in Germany</li>
+                        <li class="pricing-feature"><i class="fas fa-check"></i> Email support</li>
+                        <li class="pricing-feature"><i class="fas fa-check"></i> GDPR compliant</li>
+                        <li class="pricing-feature"><i class="fas fa-check"></i> No data collection</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <a href="#contact" class="btn btn-secondary pricing-btn">Contact Us</a>
+                    </div>
+                </div>
+                <div class="pricing-card animate-scale-in delay-400" data-scroll>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Enterprise</h3>
+                        <div class="pricing-price"><span>$</span>3000</div>
+                        <div class="pricing-period">one-time payment</div>
+                    </div>
+                    <p class="pricing-description">Custom deployment on your servers with our expert assistance</p>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature"><i class="fas fa-check"></i> Custom deployment</li>
+                        <li class="pricing-feature"><i class="fas fa-check"></i> Expert installation</li>
+                        <li class="pricing-feature"><i class="fas fa-check"></i> Integration support</li>
+                        <li class="pricing-feature"><i class="fas fa-check"></i> Priority support</li>
+                        <li class="pricing-feature"><i class="fas fa-check"></i> GDPR compliant</li>
+                        <li class="pricing-feature"><i class="fas fa-check"></i> No data collection</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <a href="#contact" class="btn btn-accent pricing-btn">Request an Offer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     
-   </body>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-title-container">
+                <div class="section-subtitle">Get In Touch</div>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-description">Have questions? We're here to help!</p>
+                <p class="section-description" style="margin-top: 1rem;">Requesting our software is a manual process. Please contact us via this form or email us at contact@tangelo.com.tr with the product and subscription you want to purchase. We'll get back to you as soon as possible. If you provide a phone number, we can respond even faster.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Address</h4>
+                            <p>Tangelo Bilişim Ltd., Yeşilbayır Mah., 4712 Sokak, No 12, D3, 07190 Antalya</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Phone</h4>
+                            <p>(+90) 530 439 94 07</p>
+                            <p>(+49) 176 217 243 92 (Germany)</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Email</h4>
+                            <p>contact@tangelo.com.tr</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form id="contactForm" action="https://formspree.io/f/mdkeezwa" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="consent" name="consent" class="form-check-input" required>
+                            <label for="consent" class="form-check-label">I consent to my data being sent to Formspree for processing. See our <a href="#" class="privacy-link">Privacy Policy</a> for more information.</label>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Try it out Section -->
+    <section id="try-it-out" class="section">
+        <div class="container">
+            <div class="section-title-container">
+                <div class="section-subtitle">Interactive Demo</div>
+                <h2 class="section-title">Try Genuine Captcha<sup>©</sup></h2>
+                <p class="section-description">Experience our privacy-focused CAPTCHA solution in action</p>
+            </div>
+            <div class="card" style="max-width: 600px; margin: 0 auto;">
+                <div id="captcha-container" class="text-center">
+                    <div id="captcha-image-container" style="margin-bottom: 1.5rem; display: flex; justify-content: center;">
+                        <img id="captcha-image" src="/placeholder.svg" alt="CAPTCHA Challenge" style="max-width: 100%; border-radius: var(--border-radius); display: none;">
+                        <div id="captcha-loading" style="padding: 2rem; text-align: center;">
+                            <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--primary);"></i>
+                            <p style="margin-top: 1rem;">Loading CAPTCHA...</p>
+                        </div>
+                    </div>
+                    <div id="captcha-input-container" style="margin-bottom: 1.5rem; display: none;">
+                        <p style="margin-bottom: 1.5rem;">Please solve the math problem shown in the image:</p>
+                        <div style="display: flex; gap: 1rem; max-width: 300px; margin: 0 auto;">
+                            <input type="text" id="captcha-solution" class="form-control" placeholder="Your answer">
+                            <button id="verify-captcha" class="btn btn-primary">Verify</button>
+                        </div>
+                    </div>
+                    <div id="captcha-result" style="display: none; padding: 1.5rem; border-radius: var(--border-radius); margin-bottom: 1.5rem;">
+                        <p id="captcha-result-message"></p>
+                    </div>
+                    <button id="refresh-captcha" class="btn btn-outline" style="display: none;">
+                        <i class="fas fa-redo"></i> Try Another CAPTCHA
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- How-To Section -->
+    <section id="how-to" class="section why-section">
+        <div class="container">
+            <div class="section-title-container">
+                <div class="section-subtitle">Implementation Guide</div>
+                <h2 class="section-title">Genuine Captcha<sup>©</sup> API: Integration Guide</h2>
+                <p class="section-description">Follow these simple steps to integrate our privacy-focused CAPTCHA solution</p>
+            </div>
+            <div class="steps">
+                <div class="step animate-slide-left" data-scroll>
+                    <div class="step-content">
+                        <h3 class="step-title">Generate a CAPTCHA</h3>
+                        <p>Initiate a CAPTCHA challenge for your users.</p>
+                        <p><strong>Endpoint:</strong> GET https://api.genuine-captcha.io/api/captcha/create</p>
+            
+                        <div class="code-block-container">
+                            <div class="code-block">
+                                <pre><code class="language-javascript">
+            fetch('https://api.genuine-captcha.io/api/captcha/create')
+                .then(response => response.json())
+                .then(data => {
+                    const imageType = 'image/png'; // Or 'image/jpeg', etc.
+                    const base64Image = `data:${imageType};base64,${data.ImageAsBase64}`;
+                    document.getElementById('captcha-image').src = base64Image;
+            
+                    try {
+                        captchaSecret = atob(data.SecretAsBase64); // Decode secret
+                    } catch (error) {
+                        console.error("Error decoding secret:", error);
+                        // Handle the error appropriately.
+                    }
+                });
+                                </code></pre>
+                            </div>
+                            <button class="copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                        </div>
+            
+                        <div class="response-block">
+                            <pre><code class="language-json">
+            {
+                "ImageAsBase64": "[base64-encoded-image]",
+                "SecretAsBase64": "[encoded-secret]"
+            }
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="step animate-slide-right" data-scroll>
+                    <div class="step-content">
+                        <h3 class="step-title">Solve and Verify the CAPTCHA</h3>
+                        <p>After the user solves the CAPTCHA, verify their solution.</p>
+                        <p><strong>Endpoint:</strong> GET https://api.genuine-captcha.io/api/captcha/verify?captchaSolution=USER_SOLUTION&captchaSecret=SECRET_FROM_CREATE</p>
+                        <div class="code-block-container">
+                            <div class="code-block">
+                                <pre><code class="language-javascript">
+const captchaSolution = "21"; // User-provided solution
+const captchaSecret = "apiSecret"; // Secret received from the create call, decoded (NOT AS BASE64)
+
+fetch(`https://api.genuine-captcha.io/api/captcha/verify?captchaSolution=${captchaSolution}&captchaSecret=${captchaSecret}`)
+    .then(response => {
+        if (response.ok) {
+            console.log("CAPTCHA verified successfully");
+        } else {
+            console.log("CAPTCHA verification failed");
+        }
+    });
+                                </code></pre>
+                            </div>
+                            <button class="copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                        </div>
+                        <p><strong>Responses:</strong></p>
+                        <ul>
+                            <li>HTTP 200: CAPTCHA verified successfully.</li>
+                            <li>HTTP 400: CAPTCHA verification failed.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <h3 class="section-title animate-fade-in" data-scroll>Alternative Methods</h3>
+            <div class="steps">
+                <div class="step animate-slide-left" data-scroll>
+                    <div class="step-content">
+                        <h3 class="step-title">Custom Secret Creation</h3>
+                        <p>Create a CAPTCHA with your own secret.</p>
+                        <p><strong>Endpoint:</strong> GET https://api.genuine-captcha.io/api/captcha/create/custom?customSecret=YOUR_OWN_SECRET</p>
+                        <div class="code-block-container">
+                            <div class="code-block">
+                                const customSecret = "yourOwnSecret";
+
+                                fetch(`https://api.genuine-captcha.io/api/captcha/create/custom?customSecret=${customSecret}`)
+                                  .then(response => response.json())
+                                  .then(data => console.log(data));
+                            </div>
+                            <button class="copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="step animate-slide-right" data-scroll>
+                    <div class="step-content">
+                        <h3 class="step-title">Custom Secret Verification</h3>
+                        <p>Verify the CAPTCHA using your own secret.</p>
+                        <p><strong>Endpoint:</strong> GET https://api.genuine-captcha.io/api/captcha/verify/custom?captchaSolution=USER_SOLUTION&captchaSecret=SECRET_FROM_CREATE&customSecret=YOUR_OWN_SECRET</p>
+                        <div class="code-block-container">
+                            <div class="code-block">
+                                <pre><code class="language-javascript">
+const captchaSolution = "21";
+const captchaSecret = "apiSecret";
+const customSecret = "yourOwnSecret";
+
+fetch(`https://api.genuine-captcha.io/api/captcha/verify/custom?captchaSolution=${captchaSolution}&captchaSecret=${captchaSecret}&customSecret=${customSecret}`)
+    .then(response => {
+        if (response.ok) {
+            console.log("CAPTCHA verified with custom secret successfully");
+        } else {
+            console.log("CAPTCHA verification with custom secret failed");
+        }
+    });
+                                </code></pre>
+                            </div>
+                            <button class="copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <div class="footer-logo">Genuine Captcha<sup>©</sup></div>
+                    <p class="footer-description">The Open-Source, Privacy-Focused CAPTCHA Solution. Protect your site from bots while ensuring GDPR compliance and user privacy.</p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Navigation</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link-item"><a href="/" class="footer-link"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li class="footer-link-item"><a href="#features" class="footer-link"><i class="fas fa-chevron-right"></i> Features</a></li>
+                        <li class="footer-link-item"><a href="#why" class="footer-link"><i class="fas fa-chevron-right"></i> Why Genuine Captcha</a></li>
+                        <li class="footer-link-item"><a href="#how-to" class="footer-link"><i class="fas fa-chevron-right"></i> API How-To</a></li>
+                        <li class="footer-link-item"><a href="#pricing" class="footer-link"><i class="fas fa-chevron-right"></i> Pricing</a></li>
+                        <li class="footer-link-item"><a href="#contact" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li class="footer-link-item"><a href="#try-it-out" class="footer-link"><i class="fas fa-chevron-right"></i> Try it out</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Resources</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link-item"><a href="https://github.com/cryptNG/genuine-captcha" class="footer-link" target="_blank"><i class="fas fa-chevron-right"></i> GitHub</a></li>
+                        <li class="footer-link-item"><a href="https://cryptng.com" class="footer-link" target="_blank"><i class="fas fa-chevron-right"></i> CryptNG</a></li>
+                        <li class="footer-link-item"><a href="https://ai-term.io/" class="footer-link" target="_blank"><i class="fas fa-chevron-right"></i> ai-term.io</a></li>
+                        <li class="footer-link-item"><a href="#" class="footer-link impressum-link"><i class="fas fa-chevron-right"></i> Impressum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Legal</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link-item"><a href="#" class="footer-link terms-link"><i class="fas fa-chevron-right"></i> Terms of Use</a></li>
+                        <li class="footer-link-item"><a href="#" class="footer-link privacy-link"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li class="footer-link-item"><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Genuine Captcha. All rights reserved.</p>
+                <p>Genuine Captcha is proudly enriched with <a href="https://ai-term.io/" target="_blank">ai-term.io</a> - "Enhance any content to give your viewers unparalleled experience. AI-Term© excels with extensive features establishing revenue growth and SEO benefits."</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <div class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal" id="privacyModal">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <h2 class="modal-title">Privacy Policy</h2>
+            <div class="legal-content">
+                <p>Last updated: March 21, 2025</p>
+                <p>This Privacy Policy describes how Genuine Captcha ("we", "us", or "our") collects, uses, and discloses your information when you use our service.</p>
+                
+                <h3>Information We Don't Collect</h3>
+                <p>Unlike traditional CAPTCHA services, Genuine Captcha is designed with privacy at its core. We do not collect:</p>
+                <ul>
+                    <li>IP addresses</li>
+                    <li>Browser fingerprints</li>
+                    <li>Cookies</li>
+                    <li>User behavior data</li>
+                    <li>Personal information</li>
+                </ul>
+                
+                <h3>How Our Service Works</h3>
+                <p>Genuine Captcha operates by generating challenges that can be solved by humans without tracking or storing personal data. Our verification process happens in real-time without creating user profiles or persistent identifiers.</p>
+                
+                <h3>Data Processing</h3>
+                <p>For our hosted solution, the only data processed is the temporary information needed to generate and verify a CAPTCHA challenge. This data is not stored beyond the duration of the verification process.</p>
+                
+                <h3>Third-Party Services</h3>
+                <p>Our contact form uses Formspree to process submissions. When you submit the contact form, your submitted information is processed according to Formspree's privacy policy, which can be found at <a href="https://formspree.io/legal/privacy-policy/" target="_blank">https://formspree.io/legal/privacy-policy/</a>.</p>
+                
+                <h3>GDPR Compliance</h3>
+                <p>Genuine Captcha is designed to be fully compliant with the General Data Protection Regulation (GDPR). Since we don't collect personal data, many GDPR requirements regarding data processing don't apply to our core service.</p>
+                
+                <h3>Changes to This Privacy Policy</h3>
+                <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
+                
+                <h3>Contact Us</h3>
+                <p>If you have any questions about this Privacy Policy, please contact us at contact@tangelo.com.tr.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Use Modal -->
+    <div class="modal" id="termsModal">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <h2 class="modal-title">Terms of Use</h2>
+            <div class="legal-content">
+                <p>Last updated: March 21, 2025</p>
+                <p>Please read these Terms of Use ("Terms", "Terms of Use") carefully before using the Genuine Captcha service operated by Tangelo Bilişim Ltd. ("us", "we", or "our").</p>
+                
+                <h3>Acceptance of Terms</h3>
+                <p>By accessing or using our Service, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the Service.</p>
+                
+                <h3>Use License</h3>
+                <p>Genuine Captcha is available in three forms:</p>
+                <ul>
+                    <li>Open-source self-hosted version: Available under the MIT License.</li>
+                    <li>Hosted solution: Subject to subscription terms and this agreement.</li>
+                    <li>Enterprise deployment: Subject to a separate service agreement.</li>
+                </ul>
+                
+                <h3>Restrictions</h3>
+                <p>You are specifically prohibited from:</p>
+                <ul>
+                    <li>Using the Service for any illegal purpose or in violation of any local, state, national, or international law</li>
+                    <li>Attempting to bypass or break the CAPTCHA mechanism</li>
+                    <li>Reverse engineering or attempting to extract the source code of our Service (except for the open-source components)</li>
+                    <li>Redistributing the hosted service as your own</li>
+                </ul>
+                
+                <h3>Disclaimer</h3>
+                <p>The Service is provided on an "AS IS" and "AS AVAILABLE" basis. We make no warranties, expressed or implied, regarding the operation or availability of the Service.</p>
+                
+                <h3>Limitation of Liability</h3>
+                <p>In no event shall we be liable for any indirect, incidental, special, consequential or punitive damages resulting from your use of or inability to use the Service.</p>
+                
+                <h3>Changes to Terms</h3>
+                <p>We reserve the right to modify or replace these Terms at any time. It is your responsibility to check these Terms periodically for changes.</p>
+                
+                <h3>Contact Us</h3>
+                <p>If you have any questions about these Terms, please contact us at contact@tangelo.com.tr.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Impressum Modal -->
+    <div class="modal" id="impressumModal">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <h2 class="modal-title">Impressum</h2>
+            <div class="legal-content">
+                <h3>Company Information</h3>
+                <p><strong>Tangelo Bilişim Ltd.</strong><br>
+                Yeşilbayır Mah., 4712 Sokak, No 12, D3<br>
+                07190 Antalya<br>
+                Turkey</p>
+                
+                <h3>Contact</h3>
+                <p>Phone: (+90) 530 439 94 07<br>
+                Email: contact@tangelo.com.tr</p>
+                
+                <h3>Responsible for Content</h3>
+                <p>Tangelo Bilişim Ltd. Management</p>
+                
+                <h3>VAT Registration Number</h3>
+                <p>8200757950</p>
+                
+                <h3>Commercial Register</h3>
+                <p>Registered at the Chamber of Commerce in Antalya</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Dark mode toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            const isDark = body.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            
+            if (isDark) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        });
+
+        // Scroll animations
+        const scrollElements = document.querySelectorAll('[data-scroll]');
+        
+        const elementInView = (el, percentageScroll = 100) => {
+            const elementTop = el.getBoundingClientRect().top;
+            const elementHeight = el.getBoundingClientRect().height;
+            
+            return (
+                elementTop <= 
+                ((window.innerHeight || document.documentElement.clientHeight) * (percentageScroll/100))
+            );
+        };
+        
+        const displayScrollElement = (element) => {
+            element.classList.add('scrolled');
+        };
+        
+        const hideScrollElement = (element) => {
+            element.classList.remove('scrolled');
+        };
+        
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 80)) {
+                    displayScrollElement(el);
+                } else {
+                    hideScrollElement(el);
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', () => {
+            handleScrollAnimation();
+        });
+        
+        // Initialize scroll animation check
+        handleScrollAnimation();
+
+        // Header scroll effect
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.boxShadow = 'var(--shadow)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Modal functionality
+        const modals = {
+            privacy: document.getElementById('privacyModal'),
+            terms: document.getElementById('termsModal'),
+            impressum: document.getElementById('impressumModal')
+        };
+
+        // Open modals
+        document.querySelectorAll('.privacy-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                modals.privacy.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        document.querySelectorAll('.terms-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                modals.terms.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        document.querySelectorAll('.impressum-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                modals.impressum.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modals
+        document.querySelectorAll('.modal-close').forEach(closeBtn => {
+            closeBtn.addEventListener('click', () => {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            document.querySelectorAll('.modal').forEach(modal => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            if (!document.getElementById('consent').checked) {
+                e.preventDefault();
+                alert('Please consent to data processing before submitting the form.');
+            }
+        });
+
+        // Copy button functionality
+        document.querySelectorAll('.copy-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const codeBlock = button.previousElementSibling;
+                const code = codeBlock.textContent.trim();
+                
+                navigator.clipboard.writeText(code)
+                    .then(() => {
+                        // Change button text temporarily
+                        const originalText = button.innerHTML;
+                        button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                        
+                        setTimeout(() => {
+                            button.innerHTML = originalText;
+                        }, 2000);
+                    })
+                    .catch(err => {
+                        console.error('Failed to copy: ', err);
+                        alert('Failed to copy code. Please try again.');
+                    });
+            });
+        });
+    </script>
+    <script>
+        // Captcha functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            let captchaSecret = '';
+            const captchaFacts = [
+                "Did you know? The term CAPTCHA stands for 'Completely Automated Public Turing test to tell Computers and Humans Apart'.",
+                "Did you know? The first CAPTCHA was developed at Carnegie Mellon University in 2000.",
+                "Did you know? Traditional CAPTCHAs can be difficult for people with visual impairments, which is why many sites now offer audio alternatives.",
+                "Did you know? Some sophisticated bots can now solve simple text-based CAPTCHAs with up to 99% accuracy.",
+                "Did you know? reCAPTCHA was originally designed to help digitize books by having users transcribe words that optical character recognition software couldn't read.",
+                "Did you know? The average person takes about 10 seconds to solve a standard CAPTCHA.",
+                "Did you know? CAPTCHAs are a form of 'reverse Turing test' where humans prove to computers that they are human.",
+                "Did you know? Some CAPTCHAs now use behavioral analysis instead of puzzles, tracking how users interact with a website to determine if they're human.",
+                "Did you know? Privacy-focused CAPTCHAs like Genuine Captcha don't track user data or IP addresses, unlike many traditional solutions.",
+                "Did you know? GDPR compliance is a major concern with traditional CAPTCHAs, as they often collect personal data without explicit consent."
+            ];
+
+            function getRandomFact() {
+                return captchaFacts[Math.floor(Math.random() * captchaFacts.length)];
+            }
+
+            function loadCaptcha() {
+                document.getElementById('captcha-loading').style.display = 'block';
+                document.getElementById('captcha-image').style.display = 'none';
+                document.getElementById('captcha-input-container').style.display = 'none';
+                document.getElementById('captcha-result').style.display = 'none';
+                document.getElementById('refresh-captcha').style.display = 'none';
+                
+                fetch('https://api.genuine-captcha.io/api/captcha/create')
+                    .then(response => response.json())
+                    .then(data => {
+                        const imageType = 'image/png'; // Or 'image/jpeg', etc. - determine from the API documentation or response headers
+                        const base64Image = `data:${imageType};base64,${data.ImageAsBase64}`;
+                        document.getElementById('captcha-image').src = base64Image;
+                      
+                        try {
+                            captchaSecret = atob(data.SecretAsBase64); // Decode the secret
+                        } catch (error) {
+                            console.error("Error decoding captcha secret:", error);
+                            // Handle the error appropriately (e.g., set captchaSecret to null or a default value)
+                            captchaSecret = null; // Or some other default value
+                        }
+
+
+                        document.getElementById('captcha-image').style.display = 'block';
+                        document.getElementById('captcha-loading').style.display = 'none';
+                        document.getElementById('captcha-input-container').style.display = 'block';
+                        document.getElementById('refresh-captcha').style.display = 'inline-block';
+                    });
+            }
+
+            function verifyCaptcha() {
+                const solution = document.getElementById('captcha-solution').value.trim();
+                if (!solution) {
+                    alert('Please enter your answer to the CAPTCHA');
+                    return;
+                }
+
+                document.getElementById('captcha-result').style.display = 'block';
+                const resultElement = document.getElementById('captcha-result-message');
+                
+                fetch(`https://api.genuine-captcha.io/api/captcha/verify?captchaSolution=${solution}&captchaSecret=${captchaSecret}`)
+                    .then(response => {
+                        if (response.ok) {
+                            document.getElementById('captcha-result').style.backgroundColor = 'rgba(16, 185, 129, 0.1)';
+                            document.getElementById('captcha-result').style.color = 'var(--success)';
+                            resultElement.innerHTML = `<strong>Success!</strong> CAPTCHA verified correctly.<br><br>${getRandomFact()}`;
+                            document.getElementById('captcha-input-container').style.display = 'none';
+                        } else {
+                            document.getElementById('captcha-result').style.backgroundColor = 'rgba(239, 68, 68, 0.1)';
+                            document.getElementById('captcha-result').style.color = 'var(--danger)';
+                            resultElement.innerHTML = '<strong>Error:</strong> Incorrect solution. Please try again.';
+                        }
+                    });
+            }
+
+            // Initialize the captcha
+            loadCaptcha();
+
+            // Add event listeners
+            document.getElementById('verify-captcha').addEventListener('click', verifyCaptcha);
+            document.getElementById('refresh-captcha').addEventListener('click', loadCaptcha);
+            document.getElementById('captcha-solution').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    verifyCaptcha();
+                }
+            });
+        });
+    </script>
+</body>
 </html>
