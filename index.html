@@ -2798,8 +2798,9 @@ fetch(`https://api.genuine-captcha.io/api/captcha/verify/custom?captchaSolution=
 
                 document.getElementById('captcha-result').style.display = 'block';
                 const resultElement = document.getElementById('captcha-result-message');
-                
-                fetch(`https://api.genuine-captcha.io/api/captcha/verify?captchaSolution=${solution}&captchaSecret=${captchaSecret}`)
+                fetch(`https://api.genuine-captcha.io/api/captcha/verify?captchaSolution=${solution}&captchaSecret=${encodeURIComponent(captchaSecret)}`, {
+    mode: 'cors' // Add this if still having issues
+})                
                     .then(response => {
                         if (response.ok) {
                             document.getElementById('captcha-result').style.backgroundColor = 'rgba(16, 185, 129, 0.1)';
