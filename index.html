@@ -2274,7 +2274,7 @@
                     document.getElementById('captcha-image').src = base64Image;
             
                     try {
-                        captchaSecret = atob(data.SecretAsBase64); // Decode secret
+                        captchaSecret = data.SecretAsBase64;
                     } catch (error) {
                         console.error("Error decoding secret:", error);
                         // Handle the error appropriately.
@@ -2304,7 +2304,7 @@
                             <div class="code-block">
                                 <pre><code class="language-javascript">
 const captchaSolution = "21"; // User-provided solution
-const captchaSecret = "apiSecret"; // Secret received from the create call, decoded (NOT AS BASE64)
+const captchaSecret = "apiSecret"; // Secret received from the create call, undecoded
 
 fetch(`https://api.genuine-captcha.io/api/captcha/verify?captchaSolution=${solution}&captchaSecret=${encodeURIComponent(captchaSecret)}`, {
     mode: 'cors' 
@@ -2776,7 +2776,7 @@ fetch(`https://api.genuine-captcha.io/api/captcha/verify?captchaSolution=${solut
                         document.getElementById('captcha-image').src = base64Image;
                       
                         try {
-                            captchaSecret = atob(data.SecretAsBase64); // Decode the secret
+                            captchaSecret = data.SecretAsBase64;
                         } catch (error) {
                             console.error("Error decoding captcha secret:", error);
                             // Handle the error appropriately (e.g., set captchaSecret to null or a default value)
