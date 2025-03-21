@@ -2804,17 +2804,18 @@ fetch(`https://api.genuine-captcha.io/api/captcha/verify?captchaSolution=${solut
         document.addEventListener('DOMContentLoaded', () => {
             let captchaSecret = '';
             const captchaFacts = [
-                "Did you know? The term CAPTCHA stands for 'Completely Automated Public Turing test to tell Computers and Humans Apart'.",
-                "Did you know? The first CAPTCHA was developed at Carnegie Mellon University in 2000.",
-                "Did you know? Traditional CAPTCHAs can be difficult for people with visual impairments, which is why many sites now offer audio alternatives.",
-                "Did you know? Some sophisticated bots can now solve simple text-based CAPTCHAs with up to 99% accuracy.",
-                "Did you know? reCAPTCHA was originally designed to help digitize books by having users transcribe words that optical character recognition software couldn't read.",
-                "Did you know? The average person takes about 10 seconds to solve a standard CAPTCHA.",
-                "Did you know? CAPTCHAs are a form of 'reverse Turing test' where humans prove to computers that they are human.",
-                "Did you know? Some CAPTCHAs now use behavioral analysis instead of puzzles, tracking how users interact with a website to determine if they're human.",
-                "Did you know? Privacy-focused CAPTCHAs like Genuine Captcha don't track user data or IP addresses, unlike many traditional solutions.",
-                "Did you know? GDPR compliance is a major concern with traditional CAPTCHAs, as they often collect personal data without explicit consent."
-            ];
+    "Did you know? The term CAPTCHA stands for 'Completely Automated Public Turing test to tell Computers and Humans Apart'.",
+    "Did you know? The first CAPTCHA was developed at Carnegie Mellon University in 2000.",
+    "Did you know? Traditional CAPTCHAs are still one of the most widely used methods to protect websites from automated bots and malicious activity.",
+    "Did you know? reCAPTCHA was originally designed to help digitize books by having users transcribe words that optical character recognition software couldn't read.",
+    "Did you know? The average person takes about 10 seconds to solve a standard CAPTCHA, making it an efficient security measure.",
+    "Did you know? CAPTCHAs are a form of 'reverse Turing test' where humans prove to computers that they are human.",
+    "Did you know? Some CAPTCHAs now use behavioral analysis instead of puzzles, tracking how users interact with a website to determine if they're human.",
+    "Did you know? Privacy-focused CAPTCHAs like Genuine Captcha don't track user data or IP addresses, unlike many traditional solutions.",
+    "Did you know? GDPR compliance is a major concern with traditional CAPTCHAs, as they often collect personal data without explicit consent.",
+    "Did you know? CAPTCHA solutions are constantly evolving to stay ahead of increasingly sophisticated bots, ensuring more secure online interactions."
+];
+
 
             function getRandomFact() {
                 return captchaFacts[Math.floor(Math.random() * captchaFacts.length)];

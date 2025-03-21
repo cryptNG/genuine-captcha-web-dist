@@ -2809,17 +2809,18 @@ fetch(`https://api.genuine-captcha.io/api/captcha/verify?captchaSolution=${solut
         document.addEventListener('DOMContentLoaded', () => {
             let captchaSecret = '';
             const captchaFacts = [
-                "Wussten Sie? Der Begriff CAPTCHA steht für 'Completely Automated Public Turing test to tell Computers and Humans Apart'.",
-                "Wussten Sie? Das erste CAPTCHA wurde im Jahr 2000 an der Carnegie Mellon University entwickelt.",
-                "Wussten Sie? Herkömmliche CAPTCHAs können für Menschen mit Sehbehinderungen schwierig sein, weshalb viele Websites jetzt Audio-Alternativen anbieten.",
-                "Wussten Sie? Einige ausgeklügelte Bots können jetzt einfache textbasierte CAPTCHAs mit bis zu 99% Genauigkeit lösen.",
-                "Wussten Sie? reCAPTCHA wurde ursprünglich entwickelt, um bei der Digitalisierung von Büchern zu helfen, indem Benutzer Wörter transkribieren, die OCR-Software nicht lesen konnte.",
-                "Wussten Sie? Die durchschnittliche Person braucht etwa 10 Sekunden, um ein Standard-CAPTCHA zu lösen.",
-                "Wussten Sie? CAPTCHAs sind eine Form des 'umgekehrten Turing-Tests', bei dem Menschen Computern beweisen, dass sie menschlich sind.",
-                "Wussten Sie? Einige CAPTCHAs verwenden jetzt Verhaltensanalyse anstelle von Rätseln und verfolgen, wie Benutzer mit einer Website interagieren, um festzustellen, ob sie menschlich sind.",
-                "Wussten Sie? Datenschutzorientierte CAPTCHAs wie Genuine Captcha verfolgen keine Benutzerdaten oder IP-Adressen, im Gegensatz zu vielen herkömmlichen Lösungen.",
-                "Wussten Sie? Die DSGVO-Konformität ist ein wichtiges Anliegen bei herkömmlichen CAPTCHAs, da sie oft persönliche Daten ohne ausdrückliche Zustimmung sammeln."
-            ];
+    "Wusstest du schon? Der Begriff CAPTCHA steht für 'Completely Automated Public Turing Test to Tell Computers and Humans Apart' (Vollständig automatisierter öffentlicher Turing-Test, um Computer von Menschen zu unterscheiden).",
+    "Wusstest du schon? Das erste CAPTCHA wurde 2000 an der Carnegie Mellon University entwickelt.",
+    "Wusstest du schon? Traditionelle CAPTCHAs sind immer noch eine der am weitesten verbreiteten Methoden, um Websites vor automatisierten Bots und böswilligen Aktivitäten zu schützen.",
+    "Wusstest du schon? reCAPTCHA wurde ursprünglich entwickelt, um beim Digitalisieren von Büchern zu helfen, indem Benutzer Wörter transkribierten, die von optischen Zeichenerkennungssoftware nicht gelesen werden konnten.",
+    "Wusstest du schon? Der durchschnittliche Benutzer benötigt etwa 10 Sekunden, um ein Standard-CAPTCHA zu lösen, was es zu einer effizienten Sicherheitsmaßnahme macht.",
+    "Wusstest du schon? CAPTCHAs sind eine Form des 'Reverse Turing Tests', bei dem Menschen Computern beweisen, dass sie Menschen sind.",
+    "Wusstest du schon? Einige CAPTCHAs verwenden jetzt anstelle von Rätseln die Verhaltensanalyse und verfolgen, wie Benutzer mit einer Website interagieren, um zu bestimmen, ob sie menschlich sind.",
+    "Wusstest du schon? Datenschutzorientierte CAPTCHAs wie Genuine Captcha sammeln keine Benutzerdaten oder IP-Adressen, im Gegensatz zu vielen traditionellen Lösungen.",
+    "Wusstest du schon? Die Einhaltung der DSGVO ist eine große Sorge bei traditionellen CAPTCHAs, da sie oft persönliche Daten ohne ausdrückliche Zustimmung sammeln.",
+    "Wusstest du schon? CAPTCHA-Lösungen entwickeln sich ständig weiter, um immer ausgeklügelteren Bots einen Schritt voraus zu sein und so sicherere Online-Interaktionen zu gewährleisten."
+];
+
 
             function getRandomFact() {
                 return captchaFacts[Math.floor(Math.random() * captchaFacts.length)];
