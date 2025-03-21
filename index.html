@@ -2221,8 +2221,8 @@
             </div>
             <div class="card" style="max-width: 600px; margin: 0 auto;">
                 <div id="captcha-container" class="text-center">
-                    <div id="captcha-image-container" style="margin-bottom: 1.5rem; display: flex; justify-content: center;">
-                        <img id="captcha-image" src="/placeholder.svg" alt="CAPTCHA Challenge" style="max-width: 100%; border-radius: var(--border-radius); display: none;">
+                    <div id="captcha-image-container" style="margin-bottom: 1.5rem; display: flex; justify-content: center; position: relative; overflow: hidden; height: 300px;">
+                        <img id="captcha-image" src="/placeholder.svg" alt="CAPTCHA Challenge" style="max-width: 100%; border-radius: var(--border-radius); display: none; position: absolute; top: 0; left: 0;">
                         <div id="captcha-loading" style="padding: 2rem; text-align: center;">
                             <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--primary);"></i>
                             <p style="margin-top: 1rem;">Loading CAPTCHA...</p>
@@ -2245,6 +2245,56 @@
             </div>
         </div>
     </section>
+    
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const captchaImage = document.getElementById('captcha-image');
+            const captchaImageContainer = document.getElementById('captcha-image-container');
+    
+            let x = 0;
+            let y = 0;
+            let dx = 1; // Speed in X direction (pixels per frame)
+            let dy = 1; // Speed in Y direction (pixels per frame)
+    
+            function animateCaptcha() {
+                const containerWidth = captchaImageContainer.offsetWidth;
+                const containerHeight = captchaImageContainer.offsetHeight;
+                const imageWidth = captchaImage.offsetWidth;
+                const imageHeight = captchaImage.offsetHeight;
+    
+                x += dx;
+                y += dy;
+    
+                // Bounce off the walls
+                if (x + imageWidth > containerWidth || x < 0) {
+                    dx = -dx;
+                }
+                if (y + imageHeight > containerHeight || y < 0) {
+                    dy = -dy;
+                }
+    
+                captchaImage.style.left = x + 'px';
+                captchaImage.style.top = y + 'px';
+    
+                requestAnimationFrame(animateCaptcha); // Use requestAnimationFrame for smooth animation
+            }
+    
+    
+            captchaImage.onload = () => {
+                captchaImage.style.display = 'block';
+    
+                // Initialize position (optional, can start at 0,0)
+                x = 0;
+                y = 0;
+                captchaImage.style.left = x + 'px';
+                captchaImage.style.top = y + 'px';
+    
+                animateCaptcha();
+            };
+    
+        });
+    </script>
 
 
     
