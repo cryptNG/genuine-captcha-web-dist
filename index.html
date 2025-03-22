@@ -1647,16 +1647,7 @@
                 <li class="nav-item"><a href="#try-it-out" class="nav-link">Try it out</a></li>
                 <li class="nav-item"><a href="#how-to" class="nav-link">API How-To</a></li>
                 <li class="nav-item"><a href="https://github.com/cryptNG/genuine-captcha" class="nav-link" target="_blank">Github <i class="fas fa-external-link-alt"></i></a></li>
-                <li class="nav-item">
-                    <a href="genuine-captcha-de.html" class="nav-link">
-                        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="3.2" fill="black"/>
-                            <rect y="6.4" width="24" height="3.2" fill="#DD0000"/>
-                            <rect y="12.8" width="24" height="3.2" fill="#FFCE00"/>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
+               
         </div>
     </header>
 
@@ -2322,6 +2313,333 @@
         }
     </style>
 </section>
+
+
+<!-- Example Download Section -->
+<section id="example-download" class="section example-section">
+    <div class="container">
+        <div class="section-title-container">
+            <div class="section-subtitle">Quick Implementation</div>
+            <h2 class="section-title">Ready-to-Use Example</h2>
+            <p class="section-description">Get started immediately with our self-contained implementation example</p>
+        </div>
+        <div class="example-card">
+            <div class="example-icon">
+                <i class="fas fa-file-code"></i>
+            </div>
+            <h3 class="example-title">Complete Offline-Ready Example</h3>
+            <div class="example-content">
+                <p>We've prepared a fully functional, self-contained HTML file that demonstrates how easy it is to implement Genuine Captcha in your projects.</p>
+                
+                <div class="example-features">
+                    <div class="example-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Working CAPTCHA implementation</span>
+                    </div>
+                    <div class="example-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Properly configured event listeners</span>
+                    </div>
+                    <div class="example-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Complete API integration</span>
+                    </div>
+                    <div class="example-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Ready to use offline</span>
+                    </div>
+                </div>
+                
+                <div class="example-highlight">
+                    <p>Simply download the example file, open it in your browser, and see Genuine Captcha in action. Use it as a reference or starting point for your own implementation.</p>
+                </div>
+                
+                <div class="example-buttons">
+                    <a href="/example.html" download="genuine-captcha-example.html" class="btn btn-primary example-btn">
+                        <i class="fas fa-download"></i> Download Example
+                    </a>
+                    <a href="/example.html" target="_blank" class="btn btn-outline example-btn">
+                        <i class="fas fa-external-link-alt"></i> View Example
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Example Section Styles */
+        .example-section {
+            background: radial-gradient(circle at 90% 10%, rgba(99, 102, 241, 0.1) 0%, rgba(16, 185, 129, 0.05) 90%);
+            position: relative;
+            overflow: hidden;
+            padding: 8rem 0;
+        }
+        
+        .example-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+        
+        .example-section::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+        
+        .example-card {
+            background-color: #fff;
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e2e8f0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .example-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+            border-radius: 0 0 0 100%;
+            z-index: -1;
+        }
+        
+        .example-icon {
+            font-size: 3rem;
+            color: #6366f1;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .example-icon::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #a5b4fc;
+            border-radius: 50%;
+            top: -10px;
+            left: -10px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        
+        .example-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .example-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            border-radius: 1.5px;
+        }
+        
+        .example-content {
+            color: #64748b;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .example-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .example-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .example-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .example-feature i {
+            color: #10b981;
+            font-size: 1.25rem;
+        }
+        
+        .example-highlight {
+            background-color: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid #10b981;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 2rem;
+        }
+        
+        .example-buttons {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .example-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.75rem;
+            font-weight: 600;
+            border-radius: 12px;
+            transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        }
+        
+        .example-btn i {
+            font-size: 1.1rem;
+        }
+        
+        /* Dark mode support */
+        .dark .example-card {
+            background-color: #1e293b;
+            border-color: #334155;
+        }
+        
+        .dark .example-title {
+            color: #f8fafc;
+        }
+        
+        .dark .example-content {
+            color: #94a3b8;
+        }
+        
+        .dark .example-highlight {
+            background-color: rgba(16, 185, 129, 0.05);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .example-card {
+                padding: 2rem;
+            }
+            
+            .example-buttons {
+                flex-direction: column;
+            }
+            
+            .example-title {
+                font-size: 1.75rem;
+            }
+            
+            .example-features {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .example-section {
+                padding: 5rem 0;
+            }
+            
+            .example-card {
+                padding: 1.5rem;
+            }
+            
+            .example-title {
+                font-size: 1.5rem;
+            }
+            
+            .example-content {
+                font-size: 1rem;
+            }
+        }
+    </style>
+
+    <script>
+        // Add animation to the example card when it comes into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const exampleCard = document.querySelector('.example-card');
+            
+            // Simple animation on scroll
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8
+                );
+            }
+            
+            function handleScroll() {
+                if (isElementInViewport(exampleCard) && !exampleCard.classList.contains('animated')) {
+                    exampleCard.classList.add('animated');
+                    exampleCard.style.animation = 'fadeInUp 0.8s forwards';
+                }
+            }
+            
+            // Add animation keyframes if they don't exist
+            if (!document.querySelector('#example-animations')) {
+                const style = document.createElement('style');
+                style.id = 'example-animations';
+                style.textContent = `
+                    @keyframes fadeInUp {
+                        from {
+                            opacity: 0;
+                            transform: translateY(30px);
+                        }
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+            
+            // Initial check and add scroll listener
+            handleScroll();
+            window.addEventListener('scroll', handleScroll);
+            
+            // Add click tracking for analytics (optional)
+            const downloadBtn = document.querySelector('a[download="genuine-captcha-example.html"]');
+            const viewBtn = document.querySelector('a[href="/example.html"][target="_blank"]');
+            
+            if (downloadBtn) {
+                downloadBtn.addEventListener('click', function() {
+                    console.log('Example file downloaded');
+                    // You can add analytics tracking here if needed
+                });
+            }
+            
+            if (viewBtn) {
+                viewBtn.addEventListener('click', function() {
+                    console.log('Example file viewed');
+                    // You can add analytics tracking here if needed
+                });
+            }
+        });
+    </script>
+</section>
+
+
     <!-- Pricing Section -->
     <section id="pricing" class="section pricing-section">
         <div class="container">

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genuine Captcha Usage Demo</title>
+    <style>
+        /* Basic styling for the demo */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9fafb;
+        }
+        
+        h1, h2, h3 {
+            color: #4f46e5;
+        }
+        
+        h1 {
+            border-bottom: 2px solid #6366f1;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            margin-top: 25px;
+            border-left: 3px solid #6366f1;
+            padding-left: 10px;
+        }
+        
+        .container {
+            background-color: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .captcha-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        #captcha-image-container {
+            position: relative;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        #captcha-image {
+            max-width: 100%;
+            display: none;
+        }
+        
+        #captcha-loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid #6366f1;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        input {
+            padding: 8px 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+        }
+        
+        button {
+            padding: 8px 16px;
+            background-color: #6366f1;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #4f46e5;
+        }
+        
+        #captcha-result {
+            padding: 15px;
+            border-radius: 6px;
+            display: none;
+            margin-top: 15px;
+            width: 100%;
+        }
+        
+        .success {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+        }
+        
+        .error {
+            background-color: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+        }
+        
+        /* Enhanced code block styling */
+        pre {
+            margin: 0;
+        }
+        
+        code {
+            display: block;
+            background-color: #1e293b;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Consolas', 'Monaco', monospace;
+            line-height: 1.5;
+            font-size: 14px;
+            position: relative;
+        }
+        
+        .code-header {
+            background-color: #334155;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px 8px 0 0;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .code-block {
+            margin: 20px 0;
+        }
+        
+        .code-block code {
+            margin-top: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        
+        /* Syntax highlighting */
+        .keyword {
+            color: #93c5fd;
+            font-weight: bold;
+        }
+        
+        .function {
+            color: #c4b5fd;
+        }
+        
+        .string {
+            color: #86efac;
+        }
+        
+        .comment {
+            color: #94a3b8;
+            font-style: italic;
+        }
+        
+        .variable {
+            color: #fca5a5;
+        }
+        
+        .method {
+            color: #fdba74;
+        }
+        
+        .property {
+            color: #f9a8d4;
+        }
+        
+        .number {
+            color: #a5b4fc;
+        }
+        
+        .operator {
+            color: #e2e8f0;
+        }
+        
+        .punctuation {
+            color: #cbd5e1;
+        }
+        
+        .api-endpoint {
+            background-color: #334155;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-family: monospace;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        
+        .note {
+            background-color: rgba(99, 102, 241, 0.1);
+            border-left: 4px solid #6366f1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        
+        .note-title {
+            font-weight: bold;
+            color: #4f46e5;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Genuine Captcha Usage Demo</h1>
+    <p>This is a minimalist example showing how to implement Genuine Captcha in a completely offline-usable HTML file.</p>
+    
+    <div class="container">
+        <h2>Live Demo</h2>
+        <div class="captcha-container">
+            <div id="captcha-image-container">
+                <img id="captcha-image" alt="CAPTCHA Challenge">
+                <div id="captcha-loading">
+                    <div class="spinner"></div>
+                    <p>Loading CAPTCHA...</p>
+                </div>
+            </div>
+            
+            <div id="captcha-input-container" style="display: none;">
+                <p>Please solve the math problem shown in the image:</p>
+                <div class="input-group">
+                    <input type="text" id="captcha-solution" placeholder="Your answer">
+                    <button id="verify-captcha">Verify</button>
+                </div>
+            </div>
+            
+            <div id="captcha-result"></div>
+            
+            <button id="refresh-captcha" style="display: none;">Try Another CAPTCHA</button>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>Implementation Guide</h2>
+        <p>Follow these steps to implement Genuine Captcha in your own projects:</p>
+        
+        <div class="note">
+            <div class="note-title">API Endpoints</div>
+            <p>Genuine Captcha provides two main endpoints:</p>
+            <div class="api-endpoint">GET https://api.genuine-captcha.io/api/captcha/create</div>
+            <div class="api-endpoint">GET https://api.genuine-captcha.io/api/captcha/verify</div>
+        </div>
+        
+        <h3>1. Generate a CAPTCHA</h3>
+        <p>First, make a request to generate a new CAPTCHA challenge:</p>
+        
+        <div class="code-block">
+            <div class="code-header">
+                <span>JavaScript</span>
+            </div>
+            <code><pre><span class="comment">// Store the captcha secret</span>
+<span class="keyword">let</span> <span class="variable">captchaSecret</span> = <span class="string">''</span>;
+
+<span class="comment">// Function to load a new captcha</span>
+<span class="keyword">function</span> <span class="function">loadCaptcha</span>() {
+    <span class="variable">document</span>.<span class="method">getElementById</span>(<span class="string">'captcha-loading'</span>).<span class="property">style</span>.<span class="property">display</span> = <span class="string">'block'</span>;
+    <span class="variable">document</span>.<span class="method">getElementById</span>(<span class="string">'captcha-image'</span>).<span class="property">style</span>.<span class="property">display</span> = <span class="string">'none'</span>;
+    <span class="variable">document</span>.<span class="method">getElementById</span>(<span class="string">'captcha-input-container'</span>).<span class="property">style</span>.<span class="property">display</span> = <span class="string">'none'</span>;
+    <span class="variable">document</span>.<span class="method">getElementById</span>(<span class="string">'captcha-result'</span>).<span class="property">style</span>.<span class="property">display</span> = <span class="string">'none'</span>;
+    <span class="variable">document</span>.<span class="method">getElementById</span>(<span class="string">'refresh-captcha'</span>).<span class="property">style</span>.<span class="property">display</span> = <span class="string">'none'</span>;
+    
+    <span class="method">fetch</span>(<span class="string">'https://api.genuine-captcha.io/api/captcha/create'</span>)
+        .<span class="method">then</span>(<span class="variable">response</span> <span class="operator">=></span> <span class="variable">response</span>.<span class="method">json</span>())
+        .<span class="method">then</span>(<span class="variable">data</span> <span class="operator">=></span> {
+            <span class="keyword">const</span> <span class="variable">imageType</span> = <span class="string">'image/png'</span>;
+            <span class="keyword">const</span> <span class="variable">base64Image</span> = <span class="string">`data:</span><span class="variable">${imageType}</span><span class="string">;base64,</span><span class="variable">${data.ImageAsBase64}</span><span class="string">`</span>;
+            <span class="variable">document</span>.<span class="method">getElementById</span>(<span class="string">'captcha-image'</span>).<span class="property">src</span> = <span class="variable">base64Image</span>;
+            
+            <span class="comment">// Store the secret for verification later</span>
+            <span class="variable">captchaSecret</span> = <span class="variable">data</span>.<span class="property">SecretAsBase64</span>;
+            
+            <span class="comment">// Show the captcha and input field</span>
+            <span class="variable">document</span>.<span class="method">getElementById</span>(<span class="string">'captcha-image'</span>).<span class="property">style</span>.<span class="property">display</span> = <span class="string">'block'</span>;
+            <span class="variable">document</span>.<span class="method">getElementById</span>(<span class="string">'captcha-loading'</span>).<span class="property">style</span>.<span class="property">display</span> = <span class="string">'none'</span>;
+            <span class="variable">document</span>.<span class="method">getElementById</span>(<span class="string">'captcha-input-container'</span>).<span class="property">style</span>.<span class="property">display</span> = <span class="string">'block'</span>;
+            <span class="variable">document</span>.<span class="method">getElementById</span>(<span class="string">'refresh-captcha'</span>).<span class="property">style</span>.<span class="property">display</span> = <span class="string">'inline-block'</span>;
+        })
+        .<span class="method">catch</span>(<span class="variable">error</span> <span class="operator">=></span> {
+            <span class="variable">console</span>.<span class="method">error</span>(<span class="string">"Error loading captcha:"</span>, <span class="variable">error</span>);
+            <span class="variable">document</span>.<span class="method">getElementById</span>(<span class="string">'captcha-loading'</span>).<span class="property">innerHTML</span> = 
+                <span class="string">"Error loading CAPTCHA. Please try again."</span>;
+        });
+}</pre></code>
+        </div>
+        
+        <h3>2. Verify the CAPTCHA</h3>
+        <p>After the user enters their solution, verify it with the API:</p>
+        
+        <div class="code-block">
+            <div class="code-header">
+                <span>JavaScript</span>
+            </div>
+            <code><pre><span class="comment">// Function to verify the captcha solution</span>
+<span class="keyword">function</span> <span class="function">verifyCaptcha</span>() {
+    <span class="keyword">const</span> <span class="variable">solution</span> = <span class="variable">document</span>.<span class="method">getElementById</span>(<span class="string">'captcha-solution'</span>).<span class="property">value</span>.<span class="method">trim</span>();
+    <span class="keyword">if</span> (!<span class="variable">solution</span>) {
+        <span class="method">alert</span>(<span class="string">'Please enter your answer to the CAPTCHA'</span>);
+        <span class="keyword">return</span>;
+    }
+
+    <span class="keyword">const</span> <span class="variable">resultElement</span> = <span class="variable">document</span>.<span class="method">getElementById</span>(<span class="string">'captcha-result'</span>);
+    <span class="variable">resultElement</span>.<span class="property">style</span>.<span class="property">display</span> = <span class="string">'block'</span>;
+    
+    <span class="method">fetch</span>(<span class="string">`https://api.genuine-captcha.io/api/captcha/verify?captchaSolution=</span><span class="variable">${solution}</span><span class="string">&captchaSecret=</span><span class="variable">${encodeURIComponent(captchaSecret)}</span><span class="string">`</span>, {
+        <span class="property">mode</span>: <span class="string">'cors'</span>
+    })
+    .<span class="method">then</span>(<span class="variable">response</span> <span class="operator">=></span> {
+        <span class="keyword">if</span> (<span class="variable">response</span>.<span class="property">ok</span>) {
+            <span class="variable">resultElement</span>.<span class="property">className</span> = <span class="string">'success'</span>;
+            <span class="variable">resultElement</span>.<span class="property">innerHTML</span> = <span class="string">'&lt;strong>Success!&lt;/strong> CAPTCHA verified correctly.'</span>;
+            <span class="variable">document</span>.<span class="method">getElementById</span>(<span class="string">'captcha-input-container'</span>).<span class="property">style</span>.<span class="property">display</span> = <span class="string">'none'</span>;
+        } <span class="keyword">else</span> {
+            <span class="variable">resultElement</span>.<span class="property">className</span> = <span class="string">'error'</span>;
+            <span class="variable">resultElement</span>.<span class="property">innerHTML</span> = <span class="string">'&lt;strong>Error:&lt;/strong> Incorrect solution. Please try again.'</span>;
+        }
+    })
+    .<span class="method">catch</span>(<span class="variable">error</span> <span class="operator">=></span> {
+        <span class="variable">console</span>.<span class="method">error</span>(<span class="string">"Error verifying captcha:"</span>, <span class="variable">error</span>);
+        <span class="variable">resultElement</span>.<span class="property">className</span> = <span class="string">'error'</span>;
+        <span class="variable">resultElement</span>.<span class="property">innerHTML</span> = <span class="string">'&lt;strong>Error:&lt;/strong> Failed to verify. Please try again.'</span>;
+    });
+}</pre></code>
+        </div>
+        
+        <h3>3. Initialize and Add Event Listeners</h3>
+        <p>Set up the CAPTCHA when the page loads:</p>
+        
+        <div class="code-block">
+            <div class="code-header">
+                <span>JavaScript</span>
+            </div>
+            <code><pre><span class="comment">// Initialize when the page loads</span>
+<span class="variable">document</span>.<span class="method">addEventListener</span>(<span class="string">'DOMContentLoaded'</span>, () <span class="operator">=></span> {
+    <span class="comment">// Load the initial captcha</span>
+    <span class="method">loadCaptcha</span>();
+    
+    <span class="comment">// Add event listeners</span>
+    <span class="variable">document</span>.<span class="method">getElementById</span>(<span class="string">'verify-captcha'</span>).<span class="method">addEventListener</span>(<span class="string">'click'</span>, <span class="function">verifyCaptcha</span>);
+    <span class="variable">document</span>.<span class="method">getElementById</span>(<span class="string">'refresh-captcha'</span>).<span class="method">addEventListener</span>(<span class="string">'click'</span>, <span class="function">loadCaptcha</span>);
+    <span class="variable">document</span>.<span class="method">getElementById</span>(<span class="string">'captcha-solution'</span>).<span class="method">addEventListener</span>(<span class="string">'keypress'</span>, <span class="keyword">function</span>(<span class="variable">e</span>) {
+        <span class="keyword">if</span> (<span class="variable">e</span>.<span class="property">key</span> === <span class="string">'Enter'</span>) {
+            <span class="method">verifyCaptcha</span>();
+        }
+    });
+});</pre></code>
+        </div>
+        
+        <div class="note">
+            <div class="note-title">Important Notes</div>
+            <ul>
+                <li>The CAPTCHA image is returned as a base64 string, which can be directly used in an <code>&lt;img&gt;</code> tag.</li>
+                <li>Always store the <code>SecretAsBase64</code> value securely - it's needed for verification.</li>
+                <li>For production use, consider implementing server-side verification for enhanced security.</li>
+                <li>This implementation works completely offline once loaded, except for the API calls.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        // Captcha functionality
+        let captchaSecret = '';
+        
+        function loadCaptcha() {
+            document.getElementById('captcha-loading').style.display = 'block';
+            document.getElementById('captcha-image').style.display = 'none';
+            document.getElementById('captcha-input-container').style.display = 'none';
+            document.getElementById('captcha-result').style.display = 'none';
+            document.getElementById('refresh-captcha').style.display = 'none';
+            
+            fetch('https://api.genuine-captcha.io/api/captcha/create')
+                .then(response => response.json())
+                .then(data => {
+                    const imageType = 'image/png';
+                    const base64Image = `data:${imageType};base64,${data.ImageAsBase64}`;
+                    document.getElementById('captcha-image').src = base64Image;
+                    
+                    try {
+                        captchaSecret = data.SecretAsBase64;
+                    } catch (error) {
+                        console.error("Error decoding captcha secret:", error);
+                        captchaSecret = null;
+                    }
+                    
+                    document.getElementById('captcha-image').style.display = 'block';
+                    document.getElementById('captcha-loading').style.display = 'none';
+                    document.getElementById('captcha-input-container').style.display = 'block';
+                    document.getElementById('refresh-captcha').style.display = 'inline-block';
+                })
+                .catch(error => {
+                    console.error("Error loading captcha:", error);
+                    document.getElementById('captcha-loading').innerHTML = 
+                        "Error loading CAPTCHA. Please try again.";
+                });
+        }
+        
+        function verifyCaptcha() {
+            const solution = document.getElementById('captcha-solution').value.trim();
+            if (!solution) {
+                alert('Please enter your answer to the CAPTCHA');
+                return;
+            }
+            
+            const resultElement = document.getElementById('captcha-result');
+            resultElement.style.display = 'block';
+            
+            fetch(`https://api.genuine-captcha.io/api/captcha/verify?captchaSolution=${solution}&captchaSecret=${encodeURIComponent(captchaSecret)}`, {
+                mode: 'cors'
+            })
+            .then(response => {
+                if (response.ok) {
+                    resultElement.className = 'success';
+                    resultElement.innerHTML = '<strong>Success!</strong> CAPTCHA verified correctly.';
+                    document.getElementById('captcha-input-container').style.display = 'none';
+                } else {
+                    resultElement.className = 'error';
+                    resultElement.innerHTML = '<strong>Error:</strong> Incorrect solution. Please try again.';
+                }
+            })
+            .catch(error => {
+                console.error("Error verifying captcha:", error);
+                resultElement.className = 'error';
+                resultElement.innerHTML = '<strong>Error:</strong> Failed to verify. Please try again.';
+            });
+        }
+        
+        // Initialize when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load the initial captcha
+            loadCaptcha();
+            
+            // Add event listeners
+            document.getElementById('verify-captcha').addEventListener('click', verifyCaptcha);
+            document.getElementById('refresh-captcha').addEventListener('click', loadCaptcha);
+            document.getElementById('captcha-solution').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    verifyCaptcha();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
