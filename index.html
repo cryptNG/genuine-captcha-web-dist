@@ -2078,7 +2078,250 @@
         </div>
     </section>
 
+<!-- Try Out Section -->
+<section id="try-out" class="section try-out-section">
+    <div class="container">
+        <div class="section-title-container">
+            <div class="section-subtitle">Free Trial</div>
+            <h2 class="section-title">Try Out Our API</h2>
+            <p class="section-description">Experience our fully featured CAPTCHA solution with no limitations</p>
+        </div>
+        <div class="try-out-card">
+            <div class="try-out-icon">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <h3 class="try-out-title">Free 30-Day API Access</h3>
+            <div class="try-out-content">
+                <p>We're offering immediate access to our fully featured API at <code>api.genuine-captcha.io</code> with no rate limits or restrictions for 30 days at absolutely no cost.</p>
+                
+                <div class="try-out-highlight">
+                    <strong>Ready to use right now!</strong> No registration, account creation, sign-up, or application process required. Simply start coding and integrating immediately.
+                </div>
+                
+                <p>All examples presented on this website already use this free trial API, making implementation as easy as copy-pasting what we've provided in the documentation.</p>
+                
+                <p class="try-out-note">Please note that we reserve the right to limit or disable access after the 30-day period as we see fit. However, we aim to provide the best possible experience during your trial period.</p>
+                
+                <div class="try-out-buttons">
+                    <a href="#how-to" class="btn btn-primary">View Documentation</a>
+                    <a href="#contact" class="btn btn-outline">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <style>
+        /* Try Out Section Styles */
+        .try-out-section {
+            background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, rgba(16, 185, 129, 0.05) 90%);
+            position: relative;
+            overflow: hidden;
+            padding: 8rem 0;
+        }
+        
+        .try-out-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+        
+        .try-out-section::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+        
+        .try-out-card {
+            background-color: #fff;
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e2e8f0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .try-out-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+            border-radius: 0 0 0 100%;
+            z-index: -1;
+        }
+        
+        .try-out-icon {
+            font-size: 3rem;
+            color: #6366f1;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .try-out-icon::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #a5b4fc;
+            border-radius: 50%;
+            top: -10px;
+            left: -10px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        
+        .try-out-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .try-out-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            border-radius: 1.5px;
+        }
+        
+        .try-out-content {
+            color: #64748b;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .try-out-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .try-out-content code {
+            background-color: #f1f5f9;
+            color: #6366f1;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        
+        .try-out-highlight {
+            background-color: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid #10b981;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            font-weight: 500;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+        }
+        
+        .try-out-note {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            font-style: italic;
+        }
+        
+        .try-out-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        /* Button Styles (if not already defined in your CSS) */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.75rem;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+            border: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #6366f1;
+            color: #6366f1;
+        }
+        
+        .btn-outline:hover {
+            background-color: #6366f1;
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .try-out-card {
+                padding: 2rem;
+            }
+            
+            .try-out-buttons {
+                flex-direction: column;
+            }
+            
+            .try-out-title {
+                font-size: 1.75rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .try-out-section {
+                padding: 5rem 0;
+            }
+            
+            .try-out-card {
+                padding: 1.5rem;
+            }
+            
+            .try-out-title {
+                font-size: 1.5rem;
+            }
+            
+            .try-out-content {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</section>
     <!-- Pricing Section -->
     <section id="pricing" class="section pricing-section">
         <div class="container">
@@ -2305,7 +2548,212 @@
         });
     </script>
 
+<div id="mobile-doc-notice" style="display: none;">
+    <style>
+        #mobile-doc-notice {
+            background-color: #f8fafc;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin: 2rem auto;
+            padding: 1.5rem;
+            max-width: 90%;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        #mobile-doc-notice h3 {
+            color: #6366f1;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        #mobile-doc-notice p {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        #mobile-doc-notice .icon {
+            font-size: 2.5rem;
+            color: #6366f1;
+            margin-bottom: 1rem;
+        }
+        
+        #enable-docs-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.75rem;
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            color: white;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+        
+        #enable-docs-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+        }
+        
+        /* Dark mode support */
+        .dark #mobile-doc-notice {
+            background-color: #1e293b;
+            border-color: #334155;
+        }
+        
+        .dark #mobile-doc-notice h3 {
+            color: #818cf8;
+        }
+        
+        .dark #mobile-doc-notice p {
+            color: #94a3b8;
+        }
+        
+        .dark #mobile-doc-notice .icon {
+            color: #818cf8;
+        }
+        
+        /* Media query to show this only on mobile */
+        @media (max-width: 768px) {
+            #mobile-doc-notice {
+                display: block !important;
+            }
+        }
+    </style>
+    
+    <div class="icon">
+        <i class="fas fa-mobile-alt"></i>
+    </div>
+    <h3>Documentation Not Optimized for Mobile</h3>
+    <p>The API documentation contains code examples and technical content that would be difficult to view on a mobile device. For the best experience, please visit this page on a desktop or laptop computer.</p>
+    <button id="enable-docs-btn">Show Documentation Anyway</button>
+    
+    <script>
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize the mobile documentation notice functionality
+            initMobileDocNotice();
+        });
 
+        function initMobileDocNotice() {
+            // Get elements
+            var howToSection = document.getElementById('how-to');
+            var mobileNotice = document.getElementById('mobile-doc-notice');
+            var enableDocsBtn = document.getElementById('enable-docs-btn');
+            
+            // Check if elements exist
+            if (!howToSection) {
+                console.error('Documentation section with ID "how-to" not found');
+                return;
+            }
+            
+            if (!mobileNotice) {
+                console.error('Mobile notice with ID "mobile-doc-notice" not found');
+                return;
+            }
+            
+            if (!enableDocsBtn) {
+                console.error('Button with ID "enable-docs-btn" not found');
+                return;
+            }
+            
+            // Store original display state
+            var originalDisplay = 'block'; // Default fallback
+            try {
+                originalDisplay = window.getComputedStyle(howToSection).display;
+                if (originalDisplay === 'none') {
+                    originalDisplay = 'block'; // Ensure it's visible by default on desktop
+                }
+            } catch (e) {
+                console.warn('Could not get computed style for how-to section, using default');
+            }
+            
+            // Check if we're on mobile
+            function isMobile() {
+                return window.innerWidth <= 768;
+            }
+            
+            // Function to toggle documentation visibility
+            function toggleDocumentation() {
+                if (howToSection.style.display === 'none' || howToSection.style.display === '') {
+                    howToSection.style.display = 'block';
+                    enableDocsBtn.textContent = 'Hide Documentation';
+                    
+                    // Scroll to the documentation section
+                    howToSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    howToSection.style.display = 'none';
+                    enableDocsBtn.textContent = 'Show Documentation Anyway';
+                    
+                    // Scroll back to the notice
+                    mobileNotice.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+            
+            // Add event listener to the button
+            enableDocsBtn.addEventListener('click', toggleDocumentation);
+            
+            // Intercept clicks on links pointing to #how-to
+            document.addEventListener('click', function(e) {
+                if (!isMobile()) return; // Only intercept on mobile
+                
+                var target = e.target;
+                
+                // Check if the clicked element is a link or has a parent that is a link
+                while (target && target !== document) {
+                    if (target.tagName === 'A' && target.getAttribute('href') === '#how-to') {
+                        e.preventDefault();
+                        
+                        // Scroll to our notice instead
+                        mobileNotice.scrollIntoView({ behavior: 'smooth' });
+                        return;
+                    }
+                    target = target.parentNode;
+                }
+            });
+            
+            // Function to update visibility based on screen size
+            function updateVisibility() {
+                if (isMobile()) {
+                    // On mobile, check button state to determine visibility
+                    if (enableDocsBtn.textContent === 'Show Documentation Anyway') {
+                        howToSection.style.display = 'none';
+                    }
+                } else {
+                    // On desktop, always show documentation
+                    howToSection.style.display = originalDisplay;
+                }
+            }
+            
+            // Initial setup
+            updateVisibility();
+            
+            // Check if URL has #how-to hash and scroll to appropriate section
+            if (window.location.hash === '#how-to') {
+                setTimeout(function() {
+                    if (isMobile()) {
+                        mobileNotice.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        howToSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 500);
+            }
+            
+            // Handle window resize
+            window.addEventListener('resize', updateVisibility);
+        }
+    </script>
+</div>
     
     <!-- How-To Section -->
     <section id="how-to" class="section why-section implementation-guide">
