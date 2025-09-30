@@ -1,1 +1,1 @@
-start deploying
+start deploying now
